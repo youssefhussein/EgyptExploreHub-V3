@@ -510,6 +510,36 @@
     font-weight: bold;
     color: #333; /* Set text color */
   }
+
+  /*-----------------------------------*\
+   * #TOURS BY TYPE
+  \*-----------------------------------*/
+
+
+  .afret ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: row; /* Allow items to wrap to the next row */
+    justify-content: space-evenly;
+    flex-direction: center;
+  }
+  
+  .afret li {
+    width: 50%; /* Each item takes up 50% of the container width for two items per row */
+    box-sizing: border-box; /* Include padding and border in the width */
+    padding: 5px; /* Add some spacing around each item */
+  }
+  
+  .afret img {
+    display: block;
+    width: 60%; /* Make the image fill its parent container (the list item) */
+    height: 75%; /* Maintain aspect ratio */
+  }
+  
+
+
   /* Custom CSS for Egypt Package Tours */
 .package-tours {
   margin-bottom: 20px; /* Adjust spacing as needed */
