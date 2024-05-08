@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="converter.css">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <div class="converter">
+        <h2>Currency Converter</h2>
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" placeholder="Enter amount">
+    
+        <label for="from">From:</label>
+        <select id="from">
+            <option value="usd">USD</option>
+            <option value="eur">EUR</option>
+            <option value="gbp">GBP</option>
+        </select>
+    
+        <label for="to">To:</label>
+        <select id="to">
+            <option value="egp">EGP</option>
+            
+        </select>
+    
+        <button onclick="convert()">Convert</button>
+    
+        <div id="result"></div>
+    </div>
+    
+    <script>
+        function convert() {
+            const amount = parseFloat(document.getElementById('amount').value);
+            const fromCurrency = document.getElementById('from').value;
+            const toCurrency = document.getElementById('to').value;
+    
+            let result;
+            if (fromCurrency === 'usd') {
+                result = amount * 50; // Conversion rate for USD to EGP
+            } else if (fromCurrency === 'eur') {
+                result = amount * 51; // Conversion rate for EUR to EGP
+            } else if (fromCurrency === 'gbp') {
+                result = amount * 60; // Conversion rate for GBP to EGP
+            } else {
+                result = amount; // If converting from EGP, no conversion needed
+            }
+    
+            document.getElementById('result').innerText = `Result: ${result} ${toCurrency}`;
+        }
+    </script>
+
+
+<!-- Heart button -->
+
+<button class="heart-button" onclick="toggleFavorite(this)">
+    <svg class="heart-icon" viewBox="0 0 24 24">
+      <path class="heart-empty" fill="none" stroke="black" stroke-width="2" d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.42 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.42 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z"></path>
+      <path class="heart-filled" fill="none" stroke="red" stroke-width="2" d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.42 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.42 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z"></path>
+    </svg>
+  </button>
+  <script>
+  function toggleFavorite(button) {
+    button.classList.toggle('active');
+    if (button.classList.contains('active')) {
+      button.querySelector('.heart-empty').style.display = 'none';
+      button.querySelector('.heart-filled').style.display = 'block';
+    } else {
+      button.querySelector('.heart-empty').style.display = 'block';
+      button.querySelector('.heart-filled').style.display = 'none';
+    }
+  }
+  
+  
+  </script>
+
+
+    
+</body>
+</html>
