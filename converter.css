@@ -1,0 +1,90 @@
+.converter {
+    max-width: 400px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    box-sizing: border-box;
+}
+.converter h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+.converter label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+}
+.converter input[type="number"] {
+    width: calc(100% - 16px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.converter select {
+    width: calc(100% - 16px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.converter button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+.converter button:hover {
+    background-color: #0056b3;
+}
+.converter #result {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+}
+
+
+/* heart button */
+
+.heart-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: color 0.3s;
+    transform: translate(500px, 10%);
+  }
+  
+  .heart-icon {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .heart-empty {
+    fill: none;
+  }
+  
+  .heart-filled {
+    fill: red;
+  }
+  
+  .heart-button:hover .heart-empty {
+    stroke: red;
+  }
+  
+  .heart-button:hover .heart-filled {
+    stroke: none;
+  }
