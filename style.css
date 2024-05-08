@@ -351,6 +351,10 @@
   margin-bottom: 20px; /* Adjust spacing as needed */
 }
 
+.daily-tours #tours-type{
+  margin-bottom: 20px
+}
+
 .daily-tours-title {
   display: inline-block;
   position: relative;
@@ -460,6 +464,7 @@
     background: var(--white);
     border-radius: var(--radius-25);
     padding: 20px;
+    
   }
   
   
