@@ -1,0 +1,10 @@
+.destination-header {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    width: calc(100% - 80px);
+    height: 460px;
+    min-height: 40vh;
+    padding: 95px 60px 55px;
+    background-position: center;
+    background-size: cover;
