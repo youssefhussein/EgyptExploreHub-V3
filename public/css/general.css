@@ -1,0 +1,34 @@
+:root{
+--light-blue :#19C7FF;
+--dark-orange:#BF8143;
+--blue:#4993AB;
+--brown:#80664D;
+--dark-gray:#414F54;
+--skye-blue:#68D2E8;
+--yellow:#FDDE55;
+--sand-yellow: #FEEFAD;
+--zinc-800:#27272a;
+
+/*Color Pallette
+honestly just use tailwind colors lmfao
+https://tailwindcss.com/docs/customizing-colors
+*/
+}
+html{
+    
+ 
+  font-size: inherit;}
+
+select, textarea, input, button {
+    font: inherit;
+    letter-spacing: inherit;
+    word-spacing: inherit;
+  }
+  /* Color Theme Swatches in Hex */
+.EgyptExploreHub-1-hex { color: #19C7FF; }
+.EgyptExploreHub-2-hex { color: #BF8143; }
+.EgyptExploreHub-3-hex { color: #FF8B19; }
+.EgyptExploreHub-4-hex { color: #4993AB; }
+.EgyptExploreHub-5-hex { color: #80664D; }
+.EgyptExploreHub-6-hex { color: #414F54; }
+
