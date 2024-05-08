@@ -992,6 +992,48 @@
   
     }
   
+   /*-----------------------------------*\
+   * #About Us
+  \*-----------------------------------*/
+  .li-b
+  {
+    padding-top: 10%;
+    margin-bottom: 10%
+   ;
+  }
+  .info
+  {
+    color: rgb(0, 0, 0);
+    font-size: 0.8em;
+    font-weight: 700;
+    margin: 10px;
+  }
+  
+  .card
+{
+    background-color: rgb(255, 223, 135);
+    height: 13.5em;
+    width: 20.5em;
+    box-shadow: 0 5px 25px rgba(1 1 1/ 15%);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 15px;
+    transition: 0.07s ease;
+    
+}
+.card:hover
+{
+    transform: scale(1.1);
+
+}
+.card-holder
+{
+  justify-content: space-evenly;
+  display: flex;
+  flex-direction: center;
+  margin-bottom: 10%
+  
+}
   
   
     /**
