@@ -592,6 +592,7 @@
   
   .afret .arrow.left {
     left: 0;
+    margin: 20px;
   }
   
   .afret .arrow.right {
