@@ -579,6 +579,13 @@
     
   }
 
+  .image-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+
   .afret .arrow {
     position: absolute;
     top: 50%;
@@ -592,7 +599,7 @@
   
   .afret .arrow.left {
     left: 0;
-    margin: 20px;
+    
   }
   
   .afret .arrow.right {
@@ -614,6 +621,7 @@
     font-size: 35px;
     font-weight: bold;
     color: #333; /* Set text color */
+    margin-bottom: 4%;
   }
   /* Custom CSS for Egypt Package Tours */
 .package-tours {
