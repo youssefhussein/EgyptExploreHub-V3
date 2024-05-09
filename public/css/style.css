@@ -410,9 +410,59 @@
     font-weight: var(--fw-600);
     margin-top: 35px;
   }
-  
-  
-  
+  /*-----------------------------------*\
+   * #about us
+  \*-----------------------------------*/
+  /* CSS for About Us Section */
+
+/* Container */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* About Us Content */
+.about-us-content {
+  text-align: center;
+  padding: 80px 0;
+}
+
+/* About Us Title */
+.about-us-title {
+  font-size: 2em;
+  font-weight: bold;
+  color: #333; /* Default color for the title */
+  margin-bottom: 30px;
+  position: relative; /* Position relative for pseudo-element */
+}
+
+/* Underline Style */
+.about-us-title::after {
+  content: ''; /* Empty content */
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: orange; /* Orange color for the underline */
+  position: absolute;
+  bottom: -5px; /* Position below the title */
+  left: 0;
+}
+
+/* About Us Text */
+.about-us-text {
+  font-size: 1em;
+  line-height: 10;
+  color: #666; /* Default color for the text */
+  margin-bottom: 30px;
+}
+
+
+  .about-us-text {
+    font-size: 1em;
+  }
+
+
   
   
   /*-----------------------------------*\
@@ -510,6 +560,7 @@
     font-weight: bold;
     color: #333; /* Set text color */
   }
+
   /* Custom CSS for Egypt Package Tours */
 .package-tours {
   margin-bottom: 20px; /* Adjust spacing as needed */
