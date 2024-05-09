@@ -542,7 +542,61 @@
   .popular .btn { margin-inline: auto; }
   
   
+  /*-----------------------------------*\
+   * #TOURS BY TYPE
+  \*-----------------------------------*/
+
+  .afret{
+    position: relative;
+    overflow: hidden;
+  }
+  .image-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
   
+  .afret ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: row; /* Allow items to wrap to the next row */
+    justify-content: space-evenly; /* Evenly distribute items along the main axis */
+  }
+  
+  .afret li {
+    width: 45%; /* Each item takes up 45% of the container width for two items per row */
+    box-sizing: border-box; /* Include padding and border in the width */
+    padding: 5px; /* Add smaller spacing around each item */
+  }
+  
+  .afret img {
+    display: block;
+   min-width: 100%; /* Make the image fill its parent container (the list item) */
+    min-height: 65%; /* Maintain aspect ratio */
+    
+  }
+
+  .afret .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .afret .arrow.left {
+    left: 0;
+  }
+  
+  .afret .arrow.right {
+    right: 0;
+  }
   
   
   /*-----------------------------------*\
