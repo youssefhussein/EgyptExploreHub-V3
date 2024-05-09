@@ -23,3 +23,11 @@ document.getElementById('booking-form').addEventListener('submit', function(even
       document.getElementById('error-message').innerText = '';
     }
   });
+  // JavaScript code to set min and max dates dynamically
+var today = new Date();
+var dd = String(today.getDate()).padStart(2, '0');
+var mm = String(today.getMonth() + 1).padStart(2, '0'); // January is 0!
+var yyyy = today.getFullYear();
+
+today = yyyy + '-' + mm + '-' + dd;
+document.getElementById("date").setAttribute("min", today);
