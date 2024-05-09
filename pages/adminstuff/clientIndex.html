@@ -10,15 +10,16 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="public/css/general.css" />
+    <link rel="stylesheet" href="../../public/css/general.css" />
 
-    <link rel="stylesheet" href="public/css/admin.css" />
+    <link rel="stylesheet" href="../../public/css/admin.css" />
     <!-- chart js script -->
     <!--This page is to be loaded after successful admin login from @FatmaNageh-->
+<link rel="stylesheet" href="../../public/css/formstuff.css">
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-md navbar-dark border-bottom 1">
+    <nav class="navbar navbar-expand-md navbar-dark border-bottom 1 justify-end">
       <div class="container-sm">
         <b
           class="navbar-toggler border border-0 bg-muted"
@@ -34,24 +35,10 @@
           id="main-nav"
         >
           <ul class="navbar-nav">
-            <!--            <li class="nav-item px-3">
-              <a
-                href="pages/adminstuff/analytics.html"
-                class="link-underline link-underline-opacity-0"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                  <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.
-                  <path
-                    fill="#FFD43B"
-                    d="M64 64c0-17.7-14.3-32-32-32S0 46.3 0 64V400c0 44.2 35.8 80 80 80H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H80c-8.8 0-16-7.2-16-16V64zm406.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L320 210.7l-57.4-57.4c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L240 221.3l57.4 57.4c12.5 12.5 32.8 12.5 45.3 0l128-128z"
-                  />
-                </svg>
-                <span class="content">Analytics</span></a
-              >
-            </li>-->
+          
             <li class="nav-item px-3">
               <a
-                href="../pages/adminstuff/clientIndex.html"
+                href="clientIndex.html"
                 class="link-underline link-underline-opacity-0"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
@@ -67,7 +54,7 @@
             </li>
             <li class="nav-item px-3">
               <a
-                href="pages/adminstuff/editpackage.html"
+                href="editpackage.html"
                 class="link-underline link-underline-opacity-0"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
@@ -82,7 +69,7 @@
             </li>
             <li class="nav-item px-3">
               <a
-                href="home.html"
+                href="../../home.html"
                 class="link-underline link-underline-opacity-0"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -98,7 +85,7 @@
             </li>
             <li class="nav-item px-3">
               <a
-                href="admin.html"
+                href="../../admin.html"
                 class="link-underline link-underline-opacity-0"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
@@ -116,90 +103,46 @@
         </div>
       </div>
     </nav>
-
-    <!-- main grid -->
-    <section id="content">
-      <main>
-        <div class="container-xl my-4">
-          <div class="row gx-2 justify-content-center">
-            <div class="col-lg-4 col-sm-2 pe-2" id="mycharts">
-              <div class="charts row">
-                <div class="head-graph-cont">
-                  <h1 class="chart-head">Top Packages</h1>
-                  <div class="actual-chart">
-                    <canvas id="package-canvas"></canvas>
-                  </div>
-                </div>
-              </div>
-              <br />
-              <div class="charts row">
-                <div class="head-graph-cont">
-                  <h1 class="chart-head" id="review">Current Reviews</h1>
-                  <div class="actual-chart">
-                    <canvas id="reiew-canvas"></canvas>
-                  </div>
-                </div>
-              </div>
+    <section id="select">
+      <div class="container-md">
+        <div class="row gx-5 ">
+          <div class="col  py-5">
+            <h3 class="border-bottom text-center py-2">Select the operation</h3>
+            <div class="py-3"></div>
+            <!-- select what u want here -->
+           
+            <div class="btn-group-vertical ps-3 d-flex justify-content-center" role="group">
+              <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio1"  onclick="addClient() ">
+              <label class="btn btn-outline-danger" for="vbtn-radio1">Add Client</label>
+            
+              <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio3"  onclick="removeClient()">
+              <label class="btn btn-outline-danger" for="vbtn-radio3">Remove Client</label>
             </div>
 
-            <div class="col-lg-4 col-sm-2 ps-2" id="comment_section">
-              <figure class="px-4 py-3 m-0">
-                <span class="h5">Comment Section</span>
-                <hr />
-                <blockquote class="blockquote usrquote">
-                  <p>Beautiful country! ♥♥</p>
-                </blockquote>
-                <figcaption class="blockquote-footer">
-                  5🌟 <cite title="Source Title">Salma -> SIWA</cite>
-                </figcaption>
-              </figure>
 
-              <figure class="px-4 py-3 m-0">
-                <blockquote class="blockquote usrquote">
-                  <p>Very lovely indeed 💛</p>
-                </blockquote>
-                <figcaption class="blockquote-footer">
-                  5🌟 <cite title="Source Title">Hussein -> ASWAN</cite>
-                </figcaption>
-              </figure>
-              <figure class="px-4 py-3 m-0">
-                <blockquote class="blockquote usrquote">
-                  <p>Very bad indeed 😢</p>
-                </blockquote>
-                <figcaption class="blockquote-footer">
-                  1🌟 <cite title="Source Title">Hussein -> CAIRO</cite>
-                </figcaption>
-              </figure>
-            </div>
 
-            <div class="col-lg-3 col-sm-2 gx-5 m-4" id="earning">
-              <h3 class="row display-6" id="yearly">
-                Yearly Revenue:
-                <span class="border border-success-subtle rounded-pill"
-                  >1200$</span
-                >
-              </h3>
-              <h3 class="row display-6" id="monthly">
-                Monthly Revenue:
-                <span class="border border-success-subtle rounded-pill"
-                  >3000$</span
-                >
-              </h3>
-              <hr />
-              <div class="row h1">
-                <span id="recentOrders">Recent orders:</span>
-              </div>
-              <hr />
-              <ol>
-                <li>Cairo x2</li>
-                <li>Aswan</li>
-                <li>Alexandria</li>
-                <li>Pyramids</li>
-              </ol>
-            </div>
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+
+          <div class="col  py-5">
+            <!-- iframe here -->
+<div class="py-3"></div>
+<iframe frameborder="2" id="frame"  title="myframe"></iframe>
+
+
           </div>
         </div>
-      </main>
+      </div>
     </section>
 
     <script
@@ -207,7 +150,7 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="public/js/admin.js"></script>
+<script src="../../public/js/editpackage.js"></script>
+    <script src="../../public/js/editclient.js"></script>
   </body>
 </html>

@@ -13,12 +13,11 @@
     <link rel="stylesheet" href="../../public/css/general.css" />
 
     <link rel="stylesheet" href="../../public/css/admin.css" />
-    <!-- chart js script -->
-    <!--This page is to be loaded after successful admin login from @FatmaNageh-->
+  
   </head>
 
   <body>
-    <form class="dark mb-3 px-5">
+    <form class="dark mb-3 px-5" action= return validateNewClient() id="clientForm">
       <div class="mb-3 px-5 pt-5">
         <label for="name" class="form-label">Client Name</label>
         <input type="text" class="form-control" id="name" required />
@@ -42,7 +41,7 @@
         <input type="text" class="form-control" id="Country" required />
       </div>
      
-      <button type="submit" class="btn px-5 py-2 mx-5 my-2 btn-primary">
+      <button type="submit" class="btn px-5 py-2 mx-5 my-2 btn-primary" value="Submit">
         Submit
       </button>
     </form>
@@ -52,5 +51,8 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+
+
+    <script  src="../../public/js/editclient.js"></script>
   </body>
 </html>
