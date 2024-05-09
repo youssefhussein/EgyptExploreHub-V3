@@ -7,3 +7,7 @@ Start an exciting journey today with us across the ancient monument and the vast
 
 Project members:
 -Salma -Hassan - Youssef -Fatma -Zeyad 
+
+Link to static home page : https://youssefhussein.github.io/EgyptExploreHub-V3
+Link to static admin page : https://youssefhussein.github.io/EgyptExploreHub-V3/admin.html
+  
