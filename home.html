@@ -17,6 +17,7 @@
   -->
   <!-- <link rel="stylesheet" href="./assets/css/style.css"> -->
   <link rel="stylesheet" href="public/css/style.css">
+  <script src="public/js/random.js"></script>
 
   <!-- 
     - google font link
@@ -74,7 +75,7 @@
               <a href="#packages" class="navbar-link" data-nav-link>packages</a>
             </li>
             <li>
-              <a href="hot deals" class="navbar-link" data-nav-link>hot deals</a>
+              <a href="pages/converter.html" class="navbar-link" data-nav-link>services</a>
             </li>
             <li>
               <a href="#footer" class="navbar-link" data-nav-link>contact us</a>
@@ -83,8 +84,7 @@
           </ul>
 
         </nav>
-
-        <button class="btn btn-primary">Register</button>
+        <button class="btn btn-primary" id="registerButton">Register</button>
 
       </div>
     </div>
@@ -107,7 +107,7 @@
   <div class="container">
     <div class="video-wrapper">
       <video class="video-blog" autoplay muted loop>
-        <source src="/Users/salmaelkholy/Downloads/046dd42a4e576ddb146cb2aed847479e.mp4" type="video/mp4">
+        <source src="vid.mp4" type="video/mp4">
       </video>
     </div>
     <h2 class="h1 hero-title">Journey to explore egypt</h2>
@@ -164,98 +164,7 @@
 
         </div>
       </section>
-      <!-- about us section starts here -->
-
-      <section class="about us" id="about">
-        <div class="container">
-          <li class="li-b">
-          <p class="section-subtitle">why you choose us</p>
-          <h2 class="h2 section-title">About us</h2>
-          <p class="section-text">
-  
-           
-          </p>
-  
-        </li>
-        <div class="card-holder">
-        <div class="card">
-         <div class="icon"><i class="fa-solid fa-chalkboard-user"></i></div>
-      <div class="info">
-      <h3>  </h3>
-      <p>Our booking and customer
-        service team is available 7 days a
-        week to advise, help or just chat </p>
-  </div>
-      </div>
-  
-      <div class="card">
-        
-        <div class="icon"><i class="fa-solid fa-chalkboard-user"></i></div>
-    <div class="info">
-    <h3> </h3>
-    <p> Tours & packages are best price
-      guaranteed </p>
-  </div>
-    </div>
-  
-    <div class="card">
-      
-      <div class="icon"><i class="fa-solid fa-chalkboard-user"></i></div>
-  <div class="info">
-  <h3>  </h3>
-  <p> Our website is secure and we look
-    after all personal details as if they
-    are our own </p>
-  </div>
-  </div>
-  
-  
-  
-  <div class="card">
-    <div class="icon"><i class="fa-solid fa-chalkboard-user"></i></div>
-  <div class="info">
-  <h3>  </h3>
-  <p> All vehicles are safe, modern and
-    air conditioned (except for
-    camels, where ridden) </p>
-  </div>
-  </div>
-  
-  
-  <div class="card">
-    <div class="icon"><i class="fa-solid fa-chalkboard-user"></i></div>
-  <div class="info">
-  <h3>  </h3>
-  <p> All guides have a government
-    license (of course) </p>
-  </div>
-  </div>
-  
-  <div class="card">
-    <div class="icon"><i class="fa-solid fa-chalkboard-user"></i></div>
-  <div class="info">
-  <h3>  </h3>
-  <p> We have 24/7 support for
-    emergencies </p>
-  </div>
-  </div>
-  
-  <div class="card">
-    <div class="icon"><i class="fa-solid fa-chalkboard-user"></i></div>
-  <div class="info">
-  <h3>  </h3>
-  <p> We care (about you)! Really! </p>
-  </div>
-  
-  </div>
-  
-  </div>
-      </div>
-        </div>
-      </section>
-
-
-<!-- about us section ends here -->
+ 
  
 <!-- 
   - #PACKAGE
@@ -283,15 +192,7 @@
       </li>
     </ul>
 
-  
-
-  </div>
-</section>
-
-
-
-
-      <!-- 
+    <!-- 
         - #POPULAR
       -->
 
@@ -300,7 +201,7 @@
           <ul class="popular-list">
 
             <li>
-              <div class="popular-card container">
+              <div class="popular-card">
 
                 <figure class="card-img">
                   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdv8R0aszWtMMSNHcMAZNZcXsFQsMSiP6AUT7rW4du9g&s" alt="pyramids" ">
@@ -401,13 +302,133 @@
               </div>
             </li>
 
+
+
+
+
+
+            <li>
+              <div class="popular-card">
+
+                <figure class="card-img">
+                  <img src="https://english.ahram.org.eg/Media/News/2014/3/13/2014-635303409753159476-315.jpg" alt="alex library" >
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+
+                  <p class="card-subtitle">
+                    <a href="#">Egypt</a>
+                  </p>
+
+                  <h3 class="h3 card-title">
+                    <a href="#">Alex Library</a>
+                  </h3>
+
+                  <p class="card-text">
+                    The Alexandria Library , a beacon of knowledge and culture, serves as a testament to Egypt's rich intellectual heritage, offering a wealth of resources and fostering scholarly pursuits in a contemporary setting.
+                  </p>
+                  <button class="btn btn-secondary">Book Now</button>
+
+                </div>
+
+              </div>
+            </li>
+            <li>
+              <div class="popular-card">
+
+                <figure class="card-img">
+                  <img src="https://english.ahram.org.eg/Media/News/2014/3/13/2014-635303409753159476-315.jpg" alt="alex library" >
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+
+                  <p class="card-subtitle">
+                    <a href="#">Egypt</a>
+                  </p>
+
+                  <h3 class="h3 card-title">
+                    <a href="#">Alex Library</a>
+                  </h3>
+
+                  <p class="card-text">
+                    The Alexandria Library , a beacon of knowledge and culture, serves as a testament to Egypt's rich intellectual heritage, offering a wealth of resources and fostering scholarly pursuits in a contemporary setting.
+                  </p>
+
+                </div>
+
+              </div>
+            </li>
+            <li>
+              <div class="popular-card">
+
+                <figure class="card-img">
+                  <img src="https://english.ahram.org.eg/Media/News/2014/3/13/2014-635303409753159476-315.jpg" alt="alex library" >
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+
+                  <p class="card-subtitle">
+                    <a href="#">Egypt</a>
+                  </p>
+
+                  <h3 class="h3 card-title">
+                    <a href="#">Alex Library</a>
+                  </h3>
+
+                  <p class="card-text">
+                    The Alexandria Library , a beacon of knowledge and culture, serves as a testament to Egypt's rich intellectual heritage, offering a wealth of resources and fostering scholarly pursuits in a contemporary setting.
+                  </p>
+
+                </div>
+
+              </div>
+            </li>
+
+
+
+
+
+
+
           </ul>
 
-         
+  </div>
+</section>
+
+
+
+
+    
+
+<!--          
 
         </div>
       </section>
-
+ -->
 
 
 
@@ -437,7 +458,7 @@
               <div class="package-card">
 
                 <figure class="card-banner">
-                  <img src="./assets/images/packege-1.jpg" alt="Experience The Great Holiday On Beach" loading="lazy">
+                  <img src="package1.jpg" alt="Experience The Great Holiday On Beach" loading="lazy">
                 </figure>
 
                 <div class="card-content">
@@ -511,7 +532,7 @@
               <div class="package-card">
 
                 <figure class="card-banner">
-                  <img src="./assets/images/packege-2.jpg" alt="Summer Holiday To The Oxolotan River" loading="lazy">
+                  <img src="package2.jpg" alt="Summer Holiday To The Oxolotan River" loading="lazy">
                 </figure>
 
                 <div class="card-content">
@@ -585,7 +606,7 @@
               <div class="package-card">
 
                 <figure class="card-banner">
-                  <img src="./assets/images/packege-3.jpg" alt="Santorini Island's Weekend Vacation" loading="lazy">
+                  <img src="package3.jpg" alt="Santorini Island's Weekend Vacation" loading="lazy">
                 </figure>
 
                 <div class="card-content">
@@ -657,13 +678,104 @@
 
           </ul>
 
-          <button class="btn btn-primary">View All Packages</button>
+          <button class="btn btn-primary" id="viewallpackages">View All Packages</button>
 
         </div>
       </section>
 
 
+     <!-- about us section starts here -->
 
+     <section class="about us" id="about">
+      <div class="container">
+        <li class="li-b">
+        <p class="section-subtitle">why you choose us</p>
+        <h2 class="h2 section-title">About us</h2>
+        <p class="section-text">
+
+         
+        </p>
+
+      </li>
+      <div class="card-holder">
+      <div class="card">
+       <div class="icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+    <div class="info">
+    <h3>  </h3>
+    <p>Our booking and customer
+      service team is available 7 days a
+      week to advise, help or just chat </p>
+</div>
+    </div>
+
+    <div class="card">
+      
+      <div class="icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+  <div class="info">
+  <h3> </h3>
+  <p> Tours & packages are best price
+    guaranteed </p>
+</div>
+  </div>
+
+  <div class="card">
+    
+    <div class="icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+<div class="info">
+<h3>  </h3>
+<p> Our website is secure and we look
+  after all personal details as if they
+  are our own </p>
+</div>
+</div>
+
+
+
+<div class="card">
+  <div class="icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+<div class="info">
+<h3>  </h3>
+<p> All vehicles are safe, modern and
+  air conditioned (except for
+  camels, where ridden) </p>
+</div>
+</div>
+
+
+<div class="card">
+  <div class="icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+<div class="info">
+<h3>  </h3>
+<p> All guides have a government
+  license (of course) </p>
+</div>
+</div>
+
+<div class="card">
+  <div class="icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+<div class="info">
+<h3>  </h3>
+<p> We have 24/7 support for
+  emergencies </p>
+</div>
+</div>
+
+<div class="card">
+  <div class="icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+<div class="info">
+<h3>  </h3>
+<p> We care (about you)! Really! </p>
+</div>
+
+</div>
+
+</div>
+    </div>
+      </div>
+    </section>
+
+
+<!-- about us section ends here -->
 
 
     </article>
@@ -745,6 +857,7 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 <script>
     'use strict';
 
@@ -752,25 +865,25 @@
  * navbar toggle
  */
 
-const overlay = document.querySelector("[data-overlay]");
-const navOpenBtn = document.querySelector("[data-nav-open-btn]");
-const navbar = document.querySelector("[data-navbar]");
-const navCloseBtn = document.querySelector("[data-nav-close-btn]");
-const navLinks = document.querySelectorAll("[data-nav-link]");
+// const overlay = document.querySelector("[data-overlay]");
+// const navOpenBtn = document.querySelector("[data-nav-open-btn]");
+// const navbar = document.querySelector("[data-navbar]");
+// const navCloseBtn = document.querySelector("[data-nav-close-btn]");
+// const navLinks = document.querySelectorAll("[data-nav-link]");
 
-const navElemArr = [navOpenBtn, navCloseBtn, overlay];
+// const navElemArr = [navOpenBtn, navCloseBtn, overlay];
 
-const navToggleEvent = function (elem) {
-  for (let i = 0; i < elem.length; i++) {
-    elem[i].addEventListener("click", function () {
-      navbar.classList.toggle("active");
-      overlay.classList.toggle("active");
-    });
-  }
-}
+// const navToggleEvent = function (elem) {
+//   for (let i = 0; i < elem.length; i++) {
+//     elem[i].addEventListener("click", function () {
+//       navbar.classList.toggle("active");
+//       overlay.classList.toggle("active");
+//     });
+//   }
+// }
 
-navToggleEvent(navElemArr);
-navToggleEvent(navLinks);
+// navToggleEvent(navElemArr);
+// navToggleEvent(navLinks);
 
 
 
@@ -793,8 +906,29 @@ window.addEventListener("scroll", function () {
 
 });
 </script>
+<script>
+  // Get reference to the button element
+  var registerButton = document.getElementById('registerButton');
 
+  // Attach a click event listener to the button
+  registerButton.addEventListener('click', function() {
+    // Redirect the user to the desired page
+    window.location.href = 'register.html';
+  });
+</script>
 <script defer src="public/js/navbar.js" ></script>
+
+
+<script>
+  // Get reference to the button element
+  var registerButton = document.getElementById('viewallpackages');
+
+  // Attach a click event listener to the button
+  registerButton.addEventListener('click', function() {
+    // Redirect the user to the desired page
+    window.location.href = 'viewallpackages.html';
+  });
+</script>
 </body>
 
 </html>

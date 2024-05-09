@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EgyptExploreHub. - Travel agancy</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <!-- <link rel="stylesheet" href="./assets/css/style.css"> -->
+  <link rel="stylesheet" href="public/css/style.css">
+  <script src="public/js/random.js"></script>
+
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+ 
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+
+    <div class="overlay" data-overlay></div>
+
+    <div class="header-bottom">
+      <div class="container">
+
+        <nav class="navbar  nav-fixed" data-navbar>
+
+          <div class="navbar-top">
+
+            <a href="#" class="logo">
+              <img src="./assets/images/logo-blue.svg" alt="Tourly logo">
+            </a>
+
+            <button class="nav-close-btn" aria-label="Close Menu" data-nav-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+          </div>
+
+          <ul class="navbar-list">
+
+            <li>
+              <a href="#home" class="navbar-link" data-nav-link>home</a>
+            </li>
+
+            <li>
+              <a href="#about-us" class="navbar-link" data-nav-link>about us</a>
+            </li>
+
+            <li>
+              <a href="#daily-tours" class="navbar-link" data-nav-link>hot deals</a>
+            </li>
+
+            <li>
+              <a href="#packages" class="navbar-link" data-nav-link>packages</a>
+            </li>
+            <li>
+              <a href="pages/converter.html" class="navbar-link" data-nav-link>services</a>
+            </li>
+            <li>
+              <a href="#footer" class="navbar-link" data-nav-link>contact us</a>
+            </li>
+
+          </ul>
+
+        </nav>
+        <button class="btn btn-primary" id="registerButton">Register</button>
+
+      </div>
+    </div>
+
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+
+ <section class="hero" id="home">
+  <div class="container">
+    <div class="video-wrapper">
+      <video class="video-blog" autoplay muted loop>
+        <source src="vid.mp4" type="video/mp4">
+      </video>
+    </div>
+    <h2 class="h1 hero-title">Journey to explore egypt</h2>
+    <p class="hero-text">
+      Welcome to Egypt Explore Hub, your gateway to unforgettable adventures in the land of ancient wonders. Embark on a journey like no other, guided by experienced experts who are passionate about showcasing the best of Egypt's treasures. Start your adventure today!
+    </p>
+    
+    <div class="btn-group">
+      
+      <a class="btn btn-secondary" href="#packages"> Book<a>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+    </article>
+  </main>
+
+
+
+
+
+  <!-- 
+    - #GO TO TOP
+  -->
+
+  <a href="#top" class="go-top" data-go-top>
+    <ion-icon name="chevron-up-outline"></ion-icon>
+  </a>
+
+
+
+ <!-- footer section starts here  -->
+ <footer>
+  <section class="footer" id="footer">
+      <div class="container">
+          <div class="detail">
+              <h3>TravelX</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere in, non praesentium soluta quis enim aperiam aliquam, rem totam porro, vel obcaecati modi architecto error maiores iusto quaerat aut eum.</p>
+              <h5>get in touch</h5>
+              <a href="#">example@mail.com</a>
+              <div class="social">
+                  <a href="#"><i class="fa fa-linkedin-square"></i></a>
+                  <a href="#"><i class="fa fa-facebook-square"></i></a>
+                  <a href="#"><i class="fa fa-twitter-square"></i></a>
+              </div>
+          </div>
+          <div class="about-us">
+              <h4>about us</h4>
+              <li><a href="#">about us</a></li>
+              <li><a href="#">our term</a></li>
+              <li><a href="#">careers <span>we're hiring!</span></a></li>
+              <li><a href="#">mission and values</a></li>
+              <li><a href="#">partnerships</a></li>
+          </div>
+          <div class="about-us">
+              <h4>help</h4>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">booking guide</a></li>
+              <li><a href="#">cancellation policy</a></li>
+              <li><a href="#">site map</a></li>
+          </div>
+          <div class="about-us">
+              <h4>Resources</h4>
+              <li><a href="#">newsletter</a></li>
+              <li><a href="#">blog</a></li>
+              <li><a href="#">gallery</li>
+              <li><a href="#">offers</a></li>
+          </div>
+      </div>
+
+      <div class="copyright">
+          <div>
+              &copy;2024 - TravelX, inc, all rights reserved
+          </div>
+          <div>
+              <a href="#">term & conditions</a>
+              <a href="#">privacy policy</a>
+          </div>
+      </div>
+  </section>
+</footer>
+<!-- footer section ends here  -->
+
+<script>
+    'use strict';
+
+
+
+
+/**
+ * header sticky & go to top
+ */
+
+const header = document.querySelector("[data-header]");
+const goTopBtn = document.querySelector("[data-go-top]");
+
+window.addEventListener("scroll", function () {
+
+  if (window.scrollY >= 200) {
+    header.classList.add("active");
+    goTopBtn.classList.add("active");
+  } else {
+    header.classList.remove("active");
+    goTopBtn.classList.remove("active");
+  }
+
+});
+</script>
+</body>
+
+</html>
