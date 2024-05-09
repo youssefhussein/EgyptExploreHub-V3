@@ -1,0 +1,32 @@
+.container {
+    position: relative;
+    width: 100%; /* Ensure the container spans the full width */
+    max-width: 1990px; /* Limit the maximum width of the container */
+    background: ;
+  }
+
+  .image {
+    
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+  }
+
+  .text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 1; /* Ensure the text is above the image */
+  }
+  .hyperlink{
+    font-size: larger;
+    color: brown;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: block;
+    text-align: center;
+  }

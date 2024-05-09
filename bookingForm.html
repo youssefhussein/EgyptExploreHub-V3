@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>booking form</title>
+<link rel="stylesheet" href="public\css\bookingform.css">
+ </head>
+<body>
+<div class="container">
+    <h2>Book Your Trip</h2>
+    <form id="booking-form">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="date">Trip Date:</label>
+        <input type="date" id="date" name="date" required>
+      </div>
+      <input type="submit" value="Submit">
+    </form>
+    <div id="error-message" class="error-message"></div>
+  </div>
+
+
+  <script src="public\js\bookingform.js"></script>
+</body>
