@@ -1,5 +1,6 @@
 
 const iframe=document.getElementById('frame')
+//pkg index
 function addPKG() {
     
   
@@ -19,6 +20,7 @@ function removePKG() {
     iframe.src='removePKG.html'
     
 }
+//switch buttons in edit package forms
 function changeRequire( disableme,buttonID) {
     const element = document.getElementById(disableme)
    element.required = !element.required
@@ -31,4 +33,12 @@ function changeRequire( disableme,buttonID) {
     document.getElementById(buttonID).classList.add("btn-outline-secondary")
     document.getElementById(buttonID).classList.remove("btn-outline-danger")
    }
+}
+//client index
+
+function addClient() {
+    iframe.src='addcli.html';
+}
+function removeClient() {
+    iframe.src='removecli.html';
 }
