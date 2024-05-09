@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Panel</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="public/css/general.css" />
+
+    <link rel="stylesheet" href="public/css/admin.css" />
+    <!-- chart js script -->
+    <!--This page is to be loaded after successful admin login from @FatmaNageh-->
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark border-bottom 1">
+      <div class="container-sm">
+        <b
+          class="navbar-toggler border border-0 bg-muted"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#main-nav"
+          style="background-color: #51a3b4"
+        >
+          <span class="navbar-toggler-icon navbar-toggler-icon-bg"></span>
+        </b>
+        <div
+          class="collapse navbar-collapse justify-content-center align-center"
+          id="main-nav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item px-3">
+              <a
+                href="pages/adminstuff/analytics.html"
+                class="link-underline link-underline-opacity-0"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                  <path
+                    fill="#FFD43B"
+                    d="M64 64c0-17.7-14.3-32-32-32S0 46.3 0 64V400c0 44.2 35.8 80 80 80H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H80c-8.8 0-16-7.2-16-16V64zm406.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L320 210.7l-57.4-57.4c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L240 221.3l57.4 57.4c12.5 12.5 32.8 12.5 45.3 0l128-128z"
+                  />
+                </svg>
+                <span class="content">Analytics</span></a
+              >
+            </li>
+            <li class="nav-item px-3">
+              <a
+                href="pages/adminstuff/editclient.html"
+                class="link-underline link-underline-opacity-0"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                  <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                  <path
+                    fill="#FFD43B"
+                    d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H322.8c-3.1-8.8-3.7-18.4-1.4-27.8l15-60.1c2.8-11.3 8.6-21.5 16.8-29.7l40.3-40.3c-32.1-31-75.7-50.1-123.9-50.1H178.3zm435.5-68.3c-15.6-15.6-40.9-15.6-56.6 0l-29.4 29.4 71 71 29.4-29.4c15.6-15.6 15.6-40.9 0-56.6l-14.4-14.4zM375.9 417c-4.1 4.1-7 9.2-8.4 14.9l-15 60.1c-1.4 5.5 .2 11.2 4.2 15.2s9.7 5.6 15.2 4.2l60.1-15c5.6-1.4 10.8-4.3 14.9-8.4L576.1 358.7l-71-71L375.9 417z"
+                  />
+                </svg>
+
+                <span class="content">Clients</span></a
+              >
+            </li>
+            <li class="nav-item px-3">
+              <a
+                href="pages/adminstuff/editpackage.html"
+                class="link-underline link-underline-opacity-0"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                  <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                  <path
+                    fill="#FFD43B"
+                    d="M290.8 48.6l78.4 29.7L288 109.5 206.8 78.3l78.4-29.7c1.8-.7 3.8-.7 5.7 0zM136 92.5V204.7c-1.3 .4-2.6 .8-3.9 1.3l-96 36.4C14.4 250.6 0 271.5 0 294.7V413.9c0 22.2 13.1 42.3 33.5 51.3l96 42.2c14.4 6.3 30.7 6.3 45.1 0L288 457.5l113.5 49.9c14.4 6.3 30.7 6.3 45.1 0l96-42.2c20.3-8.9 33.5-29.1 33.5-51.3V294.7c0-23.3-14.4-44.1-36.1-52.4l-96-36.4c-1.3-.5-2.6-.9-3.9-1.3V92.5c0-23.3-14.4-44.1-36.1-52.4l-96-36.4c-12.8-4.8-26.9-4.8-39.7 0l-96 36.4C150.4 48.4 136 69.3 136 92.5zM392 210.6l-82.4 31.2V152.6L392 121v89.6zM154.8 250.9l78.4 29.7L152 311.7 70.8 280.6l78.4-29.7c1.8-.7 3.8-.7 5.7 0zm18.8 204.4V354.8L256 323.2v95.9l-82.4 36.2zM421.2 250.9c1.8-.7 3.8-.7 5.7 0l78.4 29.7L424 311.7l-81.2-31.1 78.4-29.7zM523.2 421.2l-77.6 34.1V354.8L528 323.2v90.7c0 3.2-1.9 6-4.8 7.3z"
+                  />
+                </svg>
+                <span class="content">Packages</span></a
+              >
+            </li>
+            <li class="nav-item px-3">
+              <a
+                href="home.html"
+                class="link-underline link-underline-opacity-0"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                  <path
+                    fill="#FFD43B"
+                    d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"
+                  />
+                </svg>
+
+                <span class="content">Logout</span></a
+              >
+            </li>
+            <li class="nav-item px-3">
+              <a
+                href="this"
+                class="link-underline link-underline-opacity-0"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                  <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                  <path
+                    fill="#FFD43B"
+                    d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"
+                  />
+                </svg>
+
+                <span class="content px-2"> Home</span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- main grid -->
+    <section id="content">
+      <main>
+        <div class="container-xl my-4">
+          <div class="row gx-2 justify-content-center">
+            <div class="col-lg-4 col-sm-2 pe-2" id="mycharts">
+              <div class="charts row">
+                <div class="head-graph-cont">
+                  <h1 class="chart-head">Top Packages</h1>
+                  <div class="actual-chart">
+                    <canvas id="package-canvas"></canvas>
+                  </div>
+                </div>
+              </div>
+              <br />
+              <div class="charts row">
+                <div class="head-graph-cont">
+                  <h1 class="chart-head" id="review">Current Reviews</h1>
+                  <div class="actual-chart">
+                    <canvas id="reiew-canvas"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-2 ps-2" id="comment_section">
+              <figure class="px-4 py-3 m-0">
+                <span class="h5">Comment Section</span>
+                <hr />
+                <blockquote class="blockquote usrquote">
+                  <p>Beautiful country! ♥♥</p>
+                </blockquote>
+                <figcaption class="blockquote-footer">
+                  5🌟 <cite title="Source Title">Salma -> SIWA</cite>
+                </figcaption>
+              </figure>
+
+              <figure class="px-4 py-3 m-0">
+                <blockquote class="blockquote usrquote">
+                  <p>Very lovely indeed 💛</p>
+                </blockquote>
+                <figcaption class="blockquote-footer">
+                  5🌟 <cite title="Source Title">Hussein -> ASWAN</cite>
+                </figcaption>
+              </figure>
+              <figure class="px-4 py-3 m-0">
+                <blockquote class="blockquote usrquote">
+                  <p>Very bad indeed 😢</p>
+                </blockquote>
+                <figcaption class="blockquote-footer">
+                  1🌟 <cite title="Source Title">Hussein -> CAIRO</cite>
+                </figcaption>
+              </figure>
+            </div>
+
+            <div class="col-lg-3 col-sm-2 gx-5 m-4" id="earning">
+              <h3 class="row display-6" id="yearly">
+                Yearly Revenue:
+                <span class="border border-success-subtle rounded-pill"
+                  >1200$</span
+                >
+              </h3>
+              <h3 class="row display-6" id="monthly">
+                Monthly Revenue:
+                <span class="border border-success-subtle rounded-pill"
+                  >3000$</span
+                >
+              </h3>
+              <hr />
+              <div class="row h1">
+                <span id="recentOrders">Recent orders:</span>
+              </div>
+              <hr />
+              <ol>
+                <li>Cairo x2</li>
+                <li>Aswan</li>
+                <li>Alexandria</li>
+                <li>Pyramids</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </main>
+    </section>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="public/js/admin.js"></script>
+  </body>
+</html>
