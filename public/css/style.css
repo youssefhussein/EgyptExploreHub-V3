@@ -586,25 +586,22 @@
     display: flex;
   }
 
-  .afret .arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
+  .scroller-container {
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
   }
   
-  .afret .arrow.left {
-    left: 0;
-    
+  .scroller {
+    display: inline-block;
   }
   
-  .afret .arrow.right {
-    right: 0;
+  .scroller img {
+    width: 300px; /* Adjust image width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Add space between images */
   }
+  
   
   
   /*-----------------------------------*\
