@@ -131,3 +131,5 @@ dist
 
 
 .vscode
+
+eslint.config.mjs
