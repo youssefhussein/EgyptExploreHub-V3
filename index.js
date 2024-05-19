@@ -15,11 +15,15 @@ app.listen(PORT)
 
 app.get('/',(req,res)=>{
 res.render('./main/index')
-
-
 })
-
-
+app.get('/register',(req,res)=>{
+    res.render('./main/register')
+})
+    
+app.get('/signup',(req,res)=>{
+res.render('./main/signup')
+})
+        
 
 
 
