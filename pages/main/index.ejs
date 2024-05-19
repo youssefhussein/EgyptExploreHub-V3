@@ -16,9 +16,9 @@
     - custom css link
   -->
   <!-- <link rel="stylesheet" href="./assets/css/style.css"> -->
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/main/style.css">
   
-  <script defer src="/js/arrow.js"></script>
+  <script defer src="/js/main/arrow.js"></script>
 
   <!-- 
     - google font link
@@ -40,19 +40,9 @@
 
   <main>
     <article>
-
-      <!-- 
-        - #HERO
-      -->
-
-
  <section class="hero" id="home">
   <div class="container">
-    <div class="video-wrapper">
-      <video class="video-blog" autoplay muted loop>
-        <source src="public/assets/video/vid.mp4" type="video/mp4">
-      </video>
-    </div>
+    <%- include('partials/video') %>
     <h2 class="h1 hero-title">Journey to explore egypt</h2>
     <p class="hero-text">
       Welcome to Egypt Explore Hub, your gateway to unforgettable adventures in the land of ancient wonders. Embark on a journey like no other, guided by experienced experts who are passionate about showcasing the best of Egypt's treasures. Start your adventure today!
@@ -184,7 +174,7 @@
         <div class="popular-card container">
 
           <figure class="card-img">
-           <a href="pages/giza.html">  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdv8R0aszWtMMSNHcMAZNZcXsFQsMSiP6AUT7rW4du9g&s" alt="pyramids" ">
+           <a href="/giza">  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdv8R0aszWtMMSNHcMAZNZcXsFQsMSiP6AUT7rW4du9g&s" alt="pyramids" ">
            </a>
           </figure>
 
@@ -219,7 +209,7 @@
         <div class="popular-card">
 
           <figure class="card-img">
-            <a href="pages/alex.html"> <img src="https://english.ahram.org.eg/Media/News/2014/3/13/2014-635303409753159476-315.jpg" alt="alex library" >
+            <a href="/alex"> <img src="https://english.ahram.org.eg/Media/News/2014/3/13/2014-635303409753159476-315.jpg" alt="alex library" >
             </a></figure>
 
           <div class="card-content">
@@ -253,7 +243,7 @@
         <div class="popular-card">
 
           <figure class="card-img">
-            <a href="pages/cairo.html">  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTASwcG7AVNrJGcE9J4Syjb_d0x-uf12ywJx6rDSn6hSg&s" alt="Salah el din citadel" >
+            <a href="cairo">  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTASwcG7AVNrJGcE9J4Syjb_d0x-uf12ywJx6rDSn6hSg&s" alt="Salah el din citadel" >
           </a></figure>
 
           <div class="card-content">
@@ -294,14 +284,14 @@
     
     <ul class="image-list">
       <li>
-        <a href="pages/best.html">
+        <a href="best">
         <img src="https://th.bing.com/th/id/OIP.ZdpBDZigrfkkalTxLNbOcgHaEO?w=293&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="">
       </a>
         <p>Best Of Cairo Tour From Sinai</p>
         
       </li>
       <li>
-        <img src="images/download.jpeg" alt="">
+        <img src="assets/images/download.jpeg" alt="">
         <p>Best Of Cairo 3 Tour</p>
       </li>
       <li>
@@ -384,7 +374,7 @@
               <div class="package-card">
 
                 <figure class="card-banner">
-                  <img src="package1.jpg" alt="Experience The Great Holiday On Beach" loading="lazy">
+                  <img src="/assets/images/package1.jpg" alt="Experience The Great Holiday On Beach" loading="lazy">
                 </figure>
 
                 <div class="card-content">
@@ -447,7 +437,7 @@
                     <span>/ per person</span>
                   </p>
 
-                   <a href = "pages/bookingForm.html"><button class="btn btn-secondary">Book Now</button></a>
+                   <a href = "bookingForm"><button class="btn btn-secondary">Book Now</button></a>
 
                 </div>
 
@@ -458,7 +448,7 @@
               <div class="package-card">
 
                 <figure class="card-banner">
-                  <img src="package2.jpg" alt="Summer Holiday To The Oxolotan River" loading="lazy">
+                  <img src="/assets/images/package2.jpg" alt="Summer Holiday To The Oxolotan River" loading="lazy">
                 </figure>
 
                 <div class="card-content">
@@ -521,7 +511,7 @@
                     <span>/ per person</span>
                   </p>
 
-                  <a href = "pages/bookingForm.html"><button class="btn btn-secondary">Book Now</button></a>
+                  <a href = "bookingForm"><button class="btn btn-secondary">Book Now</button></a>
                 </div>
 
               </div>
@@ -531,7 +521,7 @@
               <div class="package-card">
 
                 <figure class="card-banner">
-                  <img src="package3.jpg" alt="Santorini Island's Weekend Vacation" loading="lazy">
+                  <img src="/assets/images/package3.jpg" alt="Santorini Island's Weekend Vacation" loading="lazy">
                 </figure>
 
                 <div class="card-content">
@@ -594,7 +584,7 @@
                     <span>/ per person</span>
                   </p>
 
-                  <a href = "pages/bookingForm.html"><button class="btn btn-secondary">Book Now</button></a>
+                  <a href = "bookingForm"><button class="btn btn-secondary">Book Now</button></a>
                 </div>
 
               </div>
@@ -790,7 +780,7 @@ window.addEventListener("scroll", function () {
 });
 </script>
 
-<script  src="js/navbar.js" ></script>
+<script  src="js/main/navbar.js" ></script>
 </body>
 
 </html>
