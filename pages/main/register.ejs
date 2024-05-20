@@ -16,8 +16,8 @@
     - custom css link
   -->
   <!-- <link rel="stylesheet" href="./assets/css/style.css"> -->
-  <link rel="stylesheet" href="public/css/style.css">
-  <script src="public/js/random.js"></script>
+  <link rel="stylesheet" href="/css/main/style.css">
+  <script src="/js/main/random.js"></script>
 
   <!-- 
     - google font link
@@ -153,6 +153,9 @@ button {
   border: 2px solid transparent;
   transition: 0.3s ease;
 }
+button.navLog{
+  background: transparent;
+}
 
 button:hover {
   color: #fff;
@@ -174,63 +177,7 @@ button:hover {
   <!-- 
     - #HEADER
   -->
-
-  <header class="header" data-header>
-
-    <div class="overlay" data-overlay></div>
-
-    <div class="header-bottom">
-      <div class="container">
-
-        <nav class="navbar  nav-fixed" data-navbar>
-
-          <div class="navbar-top">
-
-            <a href="#" class="logo">
-              <img src="./assets/images/logo-blue.svg" alt="Tourly logo">
-            </a>
-
-            <button class="nav-close-btn" aria-label="Close Menu" data-nav-close-btn>
-              <ion-icon name="close-outline"></ion-icon>
-            </button>
-
-          </div>
-
-          <ul class="navbar-list">
-
-            <li>
-              <a href="#home" class="navbar-link" data-nav-link>home</a>
-            </li>
-
-            <li>
-              <a href="#about-us" class="navbar-link" data-nav-link>about us</a>
-            </li>
-
-            <li>
-              <a href="#daily-tours" class="navbar-link" data-nav-link>hot deals</a>
-            </li>
-
-            <li>
-              <a href="#packages" class="navbar-link" data-nav-link>packages</a>
-            </li>
-            <li>
-              <a href="pages/converter.html" class="navbar-link" data-nav-link>services</a>
-            </li>
-            <li>
-              <a href="#footer" class="navbar-link" data-nav-link>contact us</a>
-            </li>
-
-          </ul>
-
-        </nav>
-
-
-      </div>
-    </div>
-
-  </header>
-
-
+  <%- include('partials/navbar') %>
 
 
 
@@ -243,12 +190,7 @@ button:hover {
 
 
  <section class="hero" id="home">
-  <div class="video-wrapper">
-    <video class="video-blog" autoplay muted loop>
-        <source src="046dd42a4e576ddb146cb2aed847479e.mp4" type="video/mp4">
-    </video>
-</div>
- 
+ <%- include('partials/video') %>
 
 
  <div class="wrapper">
@@ -301,55 +243,7 @@ button:hover {
 
 
  <!-- footer section starts here  -->
- <footer>
-  <section class="footer" id="footer">
-      <div class="container">
-          <div class="detail">
-              <h3>TravelX</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere in, non praesentium soluta quis enim aperiam aliquam, rem totam porro, vel obcaecati modi architecto error maiores iusto quaerat aut eum.</p>
-              <h5>get in touch</h5>
-              <a href="#">example@mail.com</a>
-              <div class="social">
-                  <a href="#"><i class="fa fa-linkedin-square"></i></a>
-                  <a href="#"><i class="fa fa-facebook-square"></i></a>
-                  <a href="#"><i class="fa fa-twitter-square"></i></a>
-              </div>
-          </div>
-          <div class="about-us">
-              <h4>about us</h4>
-              <li><a href="#">about us</a></li>
-              <li><a href="#">our term</a></li>
-              <li><a href="#">careers <span>we're hiring!</span></a></li>
-              <li><a href="#">mission and values</a></li>
-              <li><a href="#">partnerships</a></li>
-          </div>
-          <div class="about-us">
-              <h4>help</h4>
-              <li><a href="#">FAQ</a></li>
-              <li><a href="#">booking guide</a></li>
-              <li><a href="#">cancellation policy</a></li>
-              <li><a href="#">site map</a></li>
-          </div>
-          <div class="about-us">
-              <h4>Resources</h4>
-              <li><a href="#">newsletter</a></li>
-              <li><a href="#">blog</a></li>
-              <li><a href="#">gallery</li>
-              <li><a href="#">offers</a></li>
-          </div>
-      </div>
-
-      <div class="copyright">
-          <div>
-              &copy;2024 - TravelX, inc, all rights reserved
-          </div>
-          <div>
-              <a href="#">term & conditions</a>
-              <a href="#">privacy policy</a>
-          </div>
-      </div>
-  </section>
-</footer>
+<%- include('partials/footer') %>
 <!-- footer section ends here  -->
 
 </body>

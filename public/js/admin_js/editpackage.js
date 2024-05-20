@@ -4,20 +4,20 @@ const iframe=document.getElementById('frame')
 function addPKG() {
     
   
-    iframe.src='addPKG.html'
+    iframe.src='addPKG'
     
 
 
 }
 function editPKG() {
     iframe.style.backgroundColor= "whitesmoke";
-    iframe.src='editPKG.html'
+    iframe.src='editPKG'
     
 
 }
 function removePKG() {
     iframe.style.backgroundColor= "whitesmoke";
-    iframe.src='removePKG.html'
+    iframe.src='removePKG'
     
 }
 //switch buttons in edit package forms
@@ -37,8 +37,8 @@ function changeRequire( disableme,buttonID) {
 //client index
 
 function addClient() {
-    iframe.src='addcli.html';
+    iframe.src='addcli';
 }
 function removeClient() {
-    iframe.src='removecli.html';
+    iframe.src='removecli';
 }
