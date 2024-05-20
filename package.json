@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon --env-file=.env index.js",
+    "dev": "console-ninja npx nodemon --env-file=.env index.js",
     "start": "node --env-file=.env index.js"
   },
   "keywords": [],

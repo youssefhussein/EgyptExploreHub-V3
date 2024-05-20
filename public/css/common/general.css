@@ -25,10 +25,11 @@ select, textarea, input, button {
     word-spacing: inherit;
   }
   /* Color Theme Swatches in Hex */
-.EgyptExploreHub-1-hex { color: #19C7FF; }
-.EgyptExploreHub-2-hex { color: #BF8143; }
-.EgyptExploreHub-3-hex { color: #FF8B19; }
-.EgyptExploreHub-4-hex { color: #4993AB; }
-.EgyptExploreHub-5-hex { color: #80664D; }
-.EgyptExploreHub-6-hex { color: #414F54; }
-
+  .EgyptExploreHub-1-hex { color: #19C7FF; }
+  .EgyptExploreHub-2-hex { color: #BF8143; }
+  .EgyptExploreHub-3-hex { color: #FF8B19; }
+  .EgyptExploreHub-4-hex { color: #4993AB; }
+  .EgyptExploreHub-5-hex { color: #80664D; }
+  .EgyptExploreHub-6-hex { color: #414F54; }
+  
+  

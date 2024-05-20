@@ -28,4 +28,4 @@ Project members:
 - [ ] Create database
 - [ ] Add stuff to database w/ input validation server side
 - [ ] Render packages in the db to the frontend
-- [ ] Fix styling
+- [X] Fix styling
