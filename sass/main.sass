@@ -1,0 +1,24 @@
+// Custom.scss
+
+
+// Include any default variable overrides here (though functions won't be available)
+// DOCS on how to use bootstrap - > https://getbootstrap.com/docs/5.3/getting-started/introduction/
+
+//overwrite variables here then use the live sass compiler extension to 'watch' and compile sass and the magic begins    
+$primary: #c9933b
+$light: #fbf5e5
+
+// import the functions & variables
+@import "../node_modules/bootstrap/scss/_functions" 
+@import "../node_modules/bootstrap/scss/_variables" 
+
+// new custom theme colours
+$custom-theme-colors: ("altlight": #f2ebfa,"altdark": #522192,"lightblue": #19C7FF, "darkorange":#BF8143, "blue":#4993AB, "brown":#80664D, "greyblue":#414F54,)
+ 
+
+// merge the maps to add new theme colors
+$theme-colors: map-merge($custom-theme-colors, $theme-colors)
+
+// import bootstrap
+@import '../node_modules/bootstrap/scss/bootstrap' 
+// Then add additional custom code here

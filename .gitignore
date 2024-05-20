@@ -130,4 +130,5 @@ dist
 .pnp.*
 
 
-.vscode
+eslint.config.mjs
+.hintrc

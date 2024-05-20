@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head') %>
+    <head><script async src="/js/admin_js/admin.js"></script>
+     <link rel="stylesheet" href="/css/admin/admin.css" />
+    </head>
+
+  <body>
+    <%- include('partials/nav') %>
+    <!-- main grid -->
+    <section id="content">
+      <main>
+        <div class="container-xl my-4">
+          <div class="row gx-2 justify-content-center">
+            <div class="col-lg-4 col-sm-2 pe-2" id="mycharts">
+              <div class="charts row">
+                <div class="head-graph-cont">
+                  <h1 class="chart-head">Top Packages</h1>
+                  <div class="actual-chart">
+                    <canvas id="package-canvas"></canvas>
+                  </div>
+                </div>
+              </div>
+              <br />
+              <div class="charts row">
+                <div class="head-graph-cont">
+                  <h1 class="chart-head" id="review">Current Reviews</h1>
+                  <div class="actual-chart">
+                    <canvas id="reiew-canvas"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-2 ps-2" id="comment_section">
+              <figure class="px-4 py-3 m-0">
+                <span class="h5">Comment Section</span>
+                <hr />
+                <blockquote class="blockquote usrquote">
+                  <p>Beautiful country! ♥♥</p>
+                </blockquote>
+                <figcaption class="blockquote-footer bg-altdark">
+                  5🌟 <cite title="Source Title">Salma -> SIWA</cite>
+                </figcaption>
+              </figure>
+
+              <figure class="px-4 py-3 m-0">
+                <blockquote class="blockquote usrquote">
+                  <p>Very lovely indeed 💛</p>
+                </blockquote>
+                <figcaption class="blockquote-footer">
+                  5🌟 <cite title="Source Title">Hussein -> ASWAN</cite>
+                </figcaption>
+              </figure>
+              <figure class="px-4 py-3 m-0">
+                <blockquote class="blockquote usrquote">
+                  <p>Very bad indeed 😢</p>
+                </blockquote>
+                <figcaption class="blockquote-footer">
+                  1🌟 <cite title="Source Title">Hussein -> CAIRO</cite>
+                </figcaption>
+              </figure>
+            </div>
+
+            <div class="col-lg-3 col-sm-2 gx-5 m-4" id="earning">
+              <h3 class="row display-6" id="yearly">
+                Yearly Revenue:
+                <span class="border border-success-subtle rounded-pill"
+                  >1200$</span
+                >
+              </h3>
+              <h3 class="row display-6" id="monthly">
+                Monthly Revenue:
+                <span class="border border-success-subtle rounded-pill"
+                  >3000$</span
+                >
+              </h3>
+              <hr />
+              <div class="row h1">
+                <span id="recentOrders">Recent orders:</span>
+              </div>
+              <hr />
+              <ol>
+                <li>Cairo x2</li>
+                <li>Aswan</li>
+                <li>Alexandria</li>
+                <li>Pyramids</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </main>
+    </section>
+
+    
+  </body>
+</html>

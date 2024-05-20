@@ -1,34 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<%- include('partials/head') %>
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EgyptExploreHub. - Travel agancy</title>
-
-  <!-- 
-    - favicon
-  -->
-  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
-
-  <!-- 
-    - custom css link
-  -->
-  <!-- <link rel="stylesheet" href="./assets/css/style.css"> -->
-  <link rel="stylesheet" href="public/css/style.css">
-  
-  <script defer src="public/js/arrow.js"></script>
-
-  <!-- 
-    - google font link
-  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap"
-    rel="stylesheet">
- 
+  <script defer src="/js/main/arrow.js"></script>
 </head>
 
 <body id="top">
@@ -36,83 +11,13 @@
   <!-- 
     - #HEADER
   -->
-
-  <header class="header" data-header>
-
-    <div class="overlay" data-overlay></div>
-
-    <div class="header-bottom">
-      <div class="container">
-
-        <nav class="navbar  nav-fixed" data-navbar>
-
-          <div class="navbar-top">
-
-            <a href="#" class="logo">
-              <img src="./assets/images/logo-blue.svg" alt="Tourly logo">
-            </a>
-
-            <button class="nav-close-btn" aria-label="Close Menu" data-nav-close-btn>
-              <ion-icon name="close-outline"></ion-icon>
-            </button>
-
-          </div>
-
-          <ul class="navbar-list">
-
-            <li>
-              <a href="#home" class="navbar-link" data-nav-link>home</a>
-            </li>
-
-            <li>
-              <a href="#about-us" class="navbar-link" data-nav-link>about us</a>
-            </li>
-
-            <li>
-              <a href="#daily-tours" class="navbar-link" data-nav-link>hot deals</a>
-            </li>
-
-            <li>
-              <a href="#packages" class="navbar-link" data-nav-link>packages</a>
-            </li>
-            <li>
-              <a href="hot deals" class="navbar-link" data-nav-link>hot deals</a>
-            </li>
-            <li>
-              <a href="#footer" class="navbar-link" data-nav-link>contact us</a>
-            </li>
-
-          </ul>
-
-        </nav>
-        <button ><a href = "register.html"class="btn btn-primary"> login</a></button>
-        <button ><a href = "signup.html"class="btn btn-primary"> signup</a></button>
-
-
-      </div>
-    </div>
-
-  </header>
-
-
-
-
+<%- include('partials/navbar') %>
 
   <main>
     <article>
-
-      <!-- 
-        - #HERO
-      -->
-
-
  <section class="hero" id="home">
   <div class="container">
-    <div class="video-wrapper">
-      <video class="video-blog" autoplay muted loop>
-        <source src="public/assets/video/vid.mp4" type="video/mp4">
-      </video>
-    </div>
+    <%- include('partials/video') %>
     <h2 class="h1 hero-title">Journey to explore egypt</h2>
     <p class="hero-text">
       Welcome to Egypt Explore Hub, your gateway to unforgettable adventures in the land of ancient wonders. Embark on a journey like no other, guided by experienced experts who are passionate about showcasing the best of Egypt's treasures. Start your adventure today!
@@ -244,7 +149,7 @@
         <div class="popular-card container">
 
           <figure class="card-img">
-           <a href="pages/giza.html">  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdv8R0aszWtMMSNHcMAZNZcXsFQsMSiP6AUT7rW4du9g&s" alt="pyramids" ">
+           <a href="/giza">  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdv8R0aszWtMMSNHcMAZNZcXsFQsMSiP6AUT7rW4du9g&s" alt="pyramids" ">
            </a>
           </figure>
 
@@ -279,7 +184,7 @@
         <div class="popular-card">
 
           <figure class="card-img">
-            <a href="pages/alex.html"> <img src="https://english.ahram.org.eg/Media/News/2014/3/13/2014-635303409753159476-315.jpg" alt="alex library" >
+            <a href="/alex"> <img src="https://english.ahram.org.eg/Media/News/2014/3/13/2014-635303409753159476-315.jpg" alt="alex library" >
             </a></figure>
 
           <div class="card-content">
@@ -313,7 +218,7 @@
         <div class="popular-card">
 
           <figure class="card-img">
-            <a href="pages/cairo.html">  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTASwcG7AVNrJGcE9J4Syjb_d0x-uf12ywJx6rDSn6hSg&s" alt="Salah el din citadel" >
+            <a href="cairo">  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTASwcG7AVNrJGcE9J4Syjb_d0x-uf12ywJx6rDSn6hSg&s" alt="Salah el din citadel" >
           </a></figure>
 
           <div class="card-content">
@@ -354,14 +259,14 @@
     
     <ul class="image-list">
       <li>
-        <a href="pages/best.html">
+        <a href="best">
         <img src="https://th.bing.com/th/id/OIP.ZdpBDZigrfkkalTxLNbOcgHaEO?w=293&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="">
       </a>
         <p>Best Of Cairo Tour From Sinai</p>
         
       </li>
       <li>
-        <img src="images/download.jpeg" alt="">
+        <img src="/assets/images/download.jpeg" alt="">
         <p>Best Of Cairo 3 Tour</p>
       </li>
       <li>
@@ -444,7 +349,7 @@
               <div class="package-card">
 
                 <figure class="card-banner">
-                  <img src="package1.jpg" alt="Experience The Great Holiday On Beach" loading="lazy">
+                  <img src="/assets/images/package1.jpg" alt="Experience The Great Holiday On Beach" loading="lazy">
                 </figure>
 
                 <div class="card-content">
@@ -507,7 +412,7 @@
                     <span>/ per person</span>
                   </p>
 
-                   <a href = "pages/bookingForm.html"><button class="btn btn-secondary">Book Now</button></a>
+                   <a href = "bookingForm"><button class="btn btn-secondary">Book Now</button></a>
 
                 </div>
 
@@ -518,7 +423,7 @@
               <div class="package-card">
 
                 <figure class="card-banner">
-                  <img src="package2.jpg" alt="Summer Holiday To The Oxolotan River" loading="lazy">
+                  <img src="/assets/images/package2.jpg" alt="Summer Holiday To The Oxolotan River" loading="lazy">
                 </figure>
 
                 <div class="card-content">
@@ -581,7 +486,7 @@
                     <span>/ per person</span>
                   </p>
 
-                  <a href = "pages/bookingForm.html"><button class="btn btn-secondary">Book Now</button></a>
+                  <a href = "bookingForm"><button class="btn btn-secondary">Book Now</button></a>
                 </div>
 
               </div>
@@ -591,7 +496,7 @@
               <div class="package-card">
 
                 <figure class="card-banner">
-                  <img src="package3.jpg" alt="Santorini Island's Weekend Vacation" loading="lazy">
+                  <img src="/assets/images/package3.jpg" alt="Santorini Island's Weekend Vacation" loading="lazy">
                 </figure>
 
                 <div class="card-content">
@@ -654,7 +559,7 @@
                     <span>/ per person</span>
                   </p>
 
-                  <a href = "pages/bookingForm.html"><button class="btn btn-secondary">Book Now</button></a>
+                  <a href = "bookingForm"><button class="btn btn-secondary">Book Now</button></a>
                 </div>
 
               </div>
@@ -787,61 +692,13 @@ emergencies </p>
 
 
  <!-- footer section starts here  -->
- <footer>
-  <section class="footer" id="footer">
-      <div class="container">
-          <div class="detail">
-              <h3>TravelX</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere in, non praesentium soluta quis enim aperiam aliquam, rem totam porro, vel obcaecati modi architecto error maiores iusto quaerat aut eum.</p>
-              <h5>get in touch</h5>
-              <a href="#">example@mail.com</a>
-              <div class="social">
-                  <a href="#"><i class="fa fa-linkedin-square"></i></a>
-                  <a href="#"><i class="fa fa-facebook-square"></i></a>
-                  <a href="#"><i class="fa fa-twitter-square"></i></a>
-              </div>
-          </div>
-          <div class="about-us">
-              <h4>about us</h4>
-              <li><a href="#">about us</a></li>
-              <li><a href="#">our term</a></li>
-              <li><a href="#">careers <span>we're hiring!</span></a></li>
-              <li><a href="#">mission and values</a></li>
-              <li><a href="#">partnerships</a></li>
-          </div>
-          <div class="about-us">
-              <h4>help</h4>
-              <li><a href="#">FAQ</a></li>
-              <li><a href="#">booking guide</a></li>
-              <li><a href="#">cancellation policy</a></li>
-              <li><a href="#">site map</a></li>
-          </div>
-          <div class="about-us">
-              <h4>Resources</h4>
-              <li><a href="#">newsletter</a></li>
-              <li><a href="#">blog</a></li>
-              <li><a href="#">gallery</li>
-              <li><a href="#">offers</a></li>
-          </div>
-      </div>
-
-      <div class="copyright">
-          <div>
-              &copy;2024 - TravelX, inc, all rights reserved
-          </div>
-          <div>
-              <a href="#">term & conditions</a>
-              <a href="#">privacy policy</a>
-          </div>
-      </div>
-  </section>
-</footer>
+  <%- include('partials/footer') %>
 <!-- footer section ends here  -->
 
   <!-- 
     - custom js link
   -->
-  <script src="./assets/js/script.js"></script>
+
 
   <!-- 
     - ionicon link
@@ -898,7 +755,7 @@ window.addEventListener("scroll", function () {
 });
 </script>
 
-<script defer src="public/js/navbar.js" ></script>
+<script  src="js/main/navbar.js" ></script>
 </body>
 
 </html>
