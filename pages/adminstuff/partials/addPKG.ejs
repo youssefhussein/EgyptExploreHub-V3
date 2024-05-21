@@ -4,30 +4,41 @@
   <body>
     <form class="dark mb-3 px-5">
       <div class="mb-3 px-5 pt-5">
-        <label for="name" class="form-label">Package Name</label>
+        <div class="form-floating">
         <input type="text" class="form-control" id="name" required />
+        <label for="name" class="form-label">Package Name</label>
+      </div>
       </div>
       <div class="mb-3 px-5">
-        <label for="location" class="form-label">Location</label>
+        <div class="form-floating">
         <input type="text" class="form-control" id="location" required />
+        <label for="location" class="form-label">Location</label>
       </div>
-
+</div>  
       <div class="mb-3 px-5">
-        <label for="price" class="form-label">Price</label>
+        <div class="form-floating">
         <input type="number" class="form-control" id="price" required />
+        <label for="price" class="form-label">Price</label>
+      </div>
       </div>
 
       <div class="mb-3 px-5">
-        <label for="Description" class="form-label"> Description</label>
-        <input type="text" class="form-control" id="Description" required />
+        <div class="form-floating">
+          <textarea  class="form-control" id="Description" placeholder="Enter a Description" style="height: 10rem"  required ></textarea>
+          <label for="Description" class="form-label"> Description</label> 
+      </div>
       </div>
       <div class="mb-3 px-5">
-        <label for="startDATE" class="form-label">Start</label>
+        <div class="form-floating">
         <input type="date" class="form-control" id="startDATE" required />
+        <label for="startDATE" class="form-label">Start</label>
+        </div>
       </div>
       <div class="mb-3 px-5">
-        <label for="endDATE" class="form-label">End</label>
+        <div class="form-floating">
         <input type="date" class="form-control" id="endDATE" required />
+        <label for="endDATE" class="form-label">End</label>
+        </div>
       </div>
 
       <button type="submit" class="btn px-5 py-2 mx-5 my-2 btn-primary">
