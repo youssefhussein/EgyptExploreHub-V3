@@ -1,7 +1,7 @@
 const express = require("express");
 const adminRouter = express.Router();
-//admin section  - will make a seperate routing file for it later
-//idk if ill do controllers in a new folder
+
+
 adminRouter.get("/", (req, res) => {
   res.render("./adminstuff/1admin" , {title:'Admin Panel'});
 });
@@ -18,11 +18,11 @@ adminRouter.get("/editPKG", (req, res) => {
 adminRouter.get("/removePKG", (req, res) => {
   res.render("./adminstuff/partials/removePKG",{title:''});
 });
+
+
 adminRouter.get("/editclient" , (req,res) =>{
 res.render("./adminstuff/clientIndex" , {title:"View Users"})
-
-
-})
+});
 
 
 
