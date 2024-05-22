@@ -21,7 +21,7 @@ const url = process.env.DB_URL
 
 //connecting to db
 mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
-.then((result)=>{app.listen(PORT) ; console.log('success');})
+.then((result)=>{app.listen(PORT) ; console.log('success', `http://localhost:${PORT}`);})
 .catch((err)=>console.log(err))
 
 //routes
