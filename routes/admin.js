@@ -18,7 +18,11 @@ adminRouter.get("/editPKG", (req, res) => {
 adminRouter.get("/removePKG", (req, res) => {
   res.render("./adminstuff/partials/removePKG",{title:''});
 });
+adminRouter.get("/editclient" , (req,res) =>{
+res.render("./adminstuff/clientIndex" , {title:"View Users"})
 
+
+})
 
 
 
