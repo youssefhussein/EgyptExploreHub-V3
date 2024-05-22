@@ -14,3 +14,4 @@ const packageSchema = Schema({
 
 
 const Package = mongoose.model("package", packageSchema);
+module.exports = Package;

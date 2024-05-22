@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
+const { isEmail } = require('validator');
 const package = require('./packages')
 const userSchema = Schema({
   _id: Schema.Types.ObjectId,
@@ -17,6 +18,7 @@ const userSchema = Schema({
     required: true,
     unique: true,
     lowercase: true,
+    validate: [isEmail, 'Please enter a valid email'],
   },
   password: {
     type: String,

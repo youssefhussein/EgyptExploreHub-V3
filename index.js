@@ -30,4 +30,3 @@ app.use('/', mainRoute);
 
 app.use('/admin', adminRoute); 
 
-console.log(new Date('2020-09-30'));
