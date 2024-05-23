@@ -26,15 +26,6 @@ adminRouter.get("/removePKG", (req, res) => {
 
 
 
-adminRouter.get("/editclient" , (req,res) =>{
-res.render("./adminstuff/clientIndex" , {title:"View Users"})
-});
-
-
-adminRouter.get("/editclient" , (req,res) =>{
-res.render("./adminstuff/clientIndex" , {title:"View Users"})
-});
-
 
 adminRouter.get("/editclient" , (req,res) =>{
 res.render("./adminstuff/clientIndex" , {title:"View Users"})
@@ -45,6 +36,7 @@ res.render("./adminstuff/clientIndex" , {title:"View Users"})
 
 
 adminRouter.post("/addpkg_post" , Packagecontrol.addpkg_post)
+
 
 
 

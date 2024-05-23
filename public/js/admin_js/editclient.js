@@ -7,11 +7,11 @@ function nameIsValid(name) {
 }
 console.log(nameIsValid('u123'));
 function passTest(password) {
-    return  /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$/.test(password)
+    return  /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$/.test(password);
 }
 function phoneIsValid(phonee){
 let regex=/^(0|[1-9][0-9]*)$/
-return regex.test(phonee)
+return regex.test(phonee);
 
 
 }
@@ -36,15 +36,15 @@ function validateNewClient() {
             }
 if (!nameIsValid(name)) {
     alert('Please type a proper username (alphabetical characters)')
-    return false
+    return false;
 }
 if (!passTest(pass)) {
     alert('Please type a proper password (characters,numbers,symbols,more than 8 characters)')
-    return false
+    return false;
 }
 if (!phoneIsValid(phoneNumber)) {
     alert('enter a valid number')
-    return false
+    return false;
 }
 alert('Client added successfully!')
 return true;
