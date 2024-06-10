@@ -11,8 +11,6 @@ app.set('views','pages')
 app.use(express.json())
 
 
-
-
 //routing
 
 const adminRoute = require('./routes/admin')

@@ -22,10 +22,21 @@ Start an exciting journey today with us across the ancient monument and the vast
 Project members:
 -Salma -Hassan - Youssef -Fatma -Zeyad 
 
+
+
+
 # TODO:
 - [X] PUT the files in the correct FOLDERS
 - [X] Adapt ejs functionality (includes)
-- [ ] Create database
+- [X] Create database
 - [ ] Add stuff to database w/ input validation server side
 - [ ] Render packages in the db to the frontend
 - [X] Fix styling
+- [ ] Add a booking form
+- [ ] Add email newsletter with nodemailer or resend
+- [ ] Add a contact page
+- [ ] Create simple express api for package inforamtion
+
+
+### check these
+isCurrency - validator package npm [npm page](https://www.npmjs.com/package/validator)
