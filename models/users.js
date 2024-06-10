@@ -1,13 +1,13 @@
 const mongoose = require("mongoose");
-const { Schema } = mongoose;
+const { isBefore } = require("date-fns");
 const { isEmail } = require('validator');
-const package = require('./packages')
-const userSchema = Schema({
-  _id: Schema.Types.ObjectId,
-
+const {package} = require('./packages')
+const bcrypt = require('bcrypt');
+const userSchema = new mongoose.Schema({
+ 
   fullname: {
     type: String,
-    required: true,
+    required:  [true, "Please enter a name"] ,
     lowercase: true,
     minlength: 3,
    
@@ -15,50 +15,52 @@ const userSchema = Schema({
 
   email: {
     type: String,
-    required: true,
-    unique: true,
+    required:  [true, "Email required"] ,
+    unique:true,
     lowercase: true,
     validate: [isEmail, 'Please enter a valid email'],
   },
   password: {
     type: String,
-    required: true,
-    minlength: 6,
+    required:  [true, "Password required"] ,
+    minlength: [6, "Minimum password length is 6 characters"],
   },
   birthday: {
     type: Date,
-    required: true,
+    validate: {
+      validator: function(v) {
+       const now = Date.now();
+       return isBefore(v, new Date(now - 1000 * 60 * 60 * 24 * 365 * 18)); // 18 years old to make account
+      },
+      message: props => `${props.value} is not over 18 years old`
+    },
+    required:  [true, "Date of Birth required"] ,
   },
   gender: {
-    enum: { values: ["Male", "Female"], message: `{VALUE} is not supported` },
-    required: true,
+    type: String,
+    enum: { values: ["Male", "Female"]},
+    required:  [true, "Gender required"] ,
   },
   category: {
     type: String,
     required: true,
     default: "client",
   },
-  comments: [{ type: Schema.Types.ObjectId, ref: 'comment' }],
+  
   packagesBought:{
     type:[package]
   }
 });
 
-const commentSchema = Schema({
-  author: { type: Schema.Types.ObjectId, ref: "user" },
-  package: package,
-  content: {
-    type: String,
-    required: true,
-    minlength:10,
-  },
-  stars: {
-    type: Number,
-    required: true,
-  },
+
+//hashing password bcrypt
+userSchema.pre('save', async function(next) {
+ const salt = await bcrypt.genSalt();
+  this.password = await bcrypt.hash(this.password, salt);
+  next();
 });
 
-const User = mongoose.model("user", userSchema);
-const Comment = mongoose.model("comment",commentSchema);
 
-module.exports = { User,Comment };
+const User = mongoose.model("user", userSchema);
+
+module.exports = { User}
