@@ -15,8 +15,13 @@ Start an exciting journey today with us across the ancient monument and the vast
     - express 
     - MongoDB using Mongoose
     - EJS for SSR
+    - bcrypt for password hashing
+    - resend or nodemailer for email newsletter
 3. Misc
     - nodemon
+    - date-fns
+    - validator
+    - eslint
    
 
 Project members:
