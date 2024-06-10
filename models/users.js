@@ -30,7 +30,7 @@ const userSchema = Schema({
     required: true,
   },
   gender: {
-    enum: { values: ["Male", "Female"], message: "{VALUE} is not supported" },
+    enum: { values: ["Male", "Female"], message: `{VALUE} is not supported` },
     required: true,
   },
   category: {
