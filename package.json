@@ -1,7 +1,7 @@
 {
   "name": "egyptexplorehub-v3",
   "version": "1.0.0",
-  "description": "MIU WEB DEV project, its funnier *****THE THIRD TIME*****",
+  "description": "MIU WEB DEV project",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
