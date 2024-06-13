@@ -33,17 +33,34 @@ module.exports.login_get = (req, res) => {
         res.render('./main/register',{title:"Login"});
   }
 //login a user
-  module.exports.login_post = async (req, res) => {
+ module.exports.login_post = async (req, res) => {
   const { email, password } = req.body;
 
-  console.log(email, password);
-  res.send('user login');
-  }
+ try {
+  const user = await User.login(email, password); 
+  const token = createToken(user);  
+  res.cookie("userLogin", token, { httpOnly: true, maxAge:7200000 , sameSite:"strict"   }); //maxAge is 2 hours cuz milliseconds
+ 
+  res.status(200).json({user:user._id });
+}
+  catch(err) {
+   const errorsLogin = handleErrors(err);
+  res.status(400).json({errorsLogin});
+}
+
+
+
+
+}
 
 // errors for creating new user
 const handleErrors = (err) => {
 
 let errorsMessages = {errors:{fullname:'',email:'', password:'',birthday:'',gender:''}};
+
+//incorrect email  or password for LOGIN
+if(err.message === "Incorrect Email") { errorsMessages.errors.email = "Incorrect email or password"; return errorsMessages; }
+if(err.message === "Incorrect Password") { errorsMessages.errors.password = "Incorrect email or password"; return errorsMessages; }
 
 //populate duplication messages
 if(err.code === 11000){

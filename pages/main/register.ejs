@@ -17,7 +17,7 @@
   -->
   <!-- <link rel="stylesheet" href="./assets/css/style.css"> -->
   <link rel="stylesheet" href="/css/main/style.css">
-  <script src="/js/main/random.js"></script>
+  <script defer src="/js/main/random.js"></script>
 
   <!-- 
     - google font link
@@ -194,15 +194,17 @@ button:hover {
 
 
  <div class="wrapper">
-    <form action="#">
+    <form action="/register" method="post">
       <h2>Login</h2>
         <div class="input-field">
         <input type="email" name="email" required>
         <label>Enter your email</label>
+       
       </div>
       <div class="input-field">
         <input type="password" name="password" required>
         <label>Enter your password</label>
+        <div id="passErr"></div>
       </div>
       <div class="forget">
         <label for="remember">
@@ -248,7 +250,7 @@ button:hover {
  <!-- footer section starts here  -->
 <%- include('partials/footer') %>
 <!-- footer section ends here  -->
-
+<script src="/js/main/register.js"></script>
 </body>
 
 </html>
