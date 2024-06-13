@@ -47,13 +47,6 @@ window.addEventListener("scroll", function () {
 });
 
   // Get reference to the button element
-  var registerButton = document.getElementById('registerButton');
-
-  // Attach a click event listener to the button
-  registerButton.addEventListener('click', function() {
-    // Redirect the user to the desired page
-    window.location.href = 'register.html';
-  });
 
 
 
