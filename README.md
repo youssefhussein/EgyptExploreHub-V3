@@ -33,13 +33,27 @@ Project members:
 - [X] Adapt ejs functionality (includes)
 - [X] Create database
 - [X] Add stuff to database w/ input validation server side
-- [ ] Render packages in the db to the frontend
+- [X] User authentication
+- [ ] User authorization
+- [ ] Admin authorization
+- [ ] Render packages in the db to the frontend 
 - [X] Fix styling
-- [ ] Add a booking form
+- [ ] Fix a booking form
+- [ ] Deploy
 - [ ] Add email newsletter with nodemailer or resend
 - [ ] Add a contact page
-- [ ] Create simple express api for package inforamtion
+- [ ] Slower background video
+- [ ] Create simple express api for package inforamtion -BONUS
+- [ ] Group chat for people that bought the same package - BONUS
 
-### check these
+
+### Check these
 
 isCurrency - validator package npm [npm page](https://www.npmjs.com/package/validator)
+
+
+### For @FatmaNageh
+- [ ] add error message for the form
+- [ ] watch nodejs playlist [Nodejs Crash course express ejs mongodb](https://www.youtube.com/playlist?list=PL4cUxeGkcC9jsz4LDYc6kv3ymONOKxwBU)
+- [ ] revise lectures and labs 2 hours
+- [ ] see the requirements for the project and choose a task
