@@ -9,6 +9,7 @@ const packageSchema = Schema({
   description: { type: String, minlength: [20,"Description too short!"] },
   startAt: { type: Date , },
   endAt: { type: Date },
+  
 });
 
 

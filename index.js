@@ -1,14 +1,17 @@
 const express = require('express')
 const mongoose = require('mongoose');
-// const mongoose = require('mongoose')  - will add later
-const PORT = 8000;
+const cookieParser = require('cookie-parser');
+const PORT = process.env.PORT || 3000;
 
 //setting the ejs folder and public folder
 const app = express()
 app.set('view engine','ejs')
 app.use(express.static('public'));
 app.set('views','pages')
+
+//middleware
 app.use(express.json())
+app.use(cookieParser())
 
 
 //routing
