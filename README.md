@@ -34,9 +34,9 @@ Project members:
 - [X] Create database
 - [X] Add stuff to database w/ input validation server side
 - [X] User authentication
-- [ ] User authorization
-- [ ] Admin authorization
-- [ ] Render packages in the db to the frontend 
+- [X] User authorization
+- [X] Admin authorization
+- [ ] Render packages in the db to the frontend (with a map)
 - [X] Fix styling
 - [ ] Fix a booking form
 - [ ] Deploy

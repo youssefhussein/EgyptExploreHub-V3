@@ -2,6 +2,7 @@ const express = require('express')
 const mongoose = require('mongoose');
 const cookieParser = require('cookie-parser');
 const PORT = process.env.PORT || 3000;
+const {checkUser} = require('./controllers/middleware/authMiddleware');
 
 //setting the ejs folder and public folder
 const app = express()
@@ -26,6 +27,8 @@ mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
 .catch((err)=>console.log(err))
 
 //routes
+
+app.get('*',checkUser)
 
 app.use('/', mainRoute); 
 

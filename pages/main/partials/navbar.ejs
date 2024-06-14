@@ -47,9 +47,20 @@
           </ul>
 
         </nav>
-        <button class="navLog" ><a href = "register"class="btn btn-primary"> login</a></button>
-        <button class="navLog" ><a href = "signup"class="btn btn-primary"> signup</a></button>
+        <% if (user) { %>
+         
+          <h3>Welcome <%= user.fullname %></h3>
+          <button class="navLog" ><a href = "logout"class="btn btn-primary"> logout</a></button>
+          <% if (user.category === "Admin") { %>
+          <button class="navLog" ><a href = "admin"class="btn btn-primary"> admin</a></button>
+           
+          <% } %>
 
+          <% } else { %> 
+            <button class="navLog" ><a href = "register"class="btn btn-primary"> login</a></button>
+            <button class="navLog" ><a href = "signup"class="btn btn-primary"> signup</a></button>
+            
+            <% } %>
 
       </div>
     </div>

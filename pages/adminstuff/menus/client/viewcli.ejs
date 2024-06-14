@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../../partials/head') %>
+<body>
+    <% console.log('server'); %>
+<script>console.log('client');</script>
+<% Clients.forEach(element => { %>
+ <div class="container">
+     <div class="row">
+         <div class="col-md-12">
+             <h3><%= element.fullname %></h3>
+           
+             
+             <p><%= element.email %></p>
+           
+             <p><%= element.birthday %></p>
+             <p><%= element.category %></p>
+         </div>
+     </div>
+ </div>
+
+
+<% }) %>
+
+
+</body>
+</html>

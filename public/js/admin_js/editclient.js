@@ -5,7 +5,7 @@ function nameIsValid(name) {
     let regex = /abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ/i;
     return regex.test(name);
 }
-console.log(nameIsValid('u123'));
+
 function passTest(password) {
     return  /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$/.test(password);
 }

@@ -37,7 +37,7 @@ const data = await res.json();
 if(data.errorsLogin){
 
  
-  passErr.innerHTML = data.errorsLogin.errors.password;
+  passErr.innerHTML = data.errorsLogin.errors.password || data.errorsLogin.errors.email;
   
 }
  if(data.user){
