@@ -53,6 +53,12 @@ module.exports.login_get = (req, res) => {
 
 }
 
+module.exports.logout_get = (req, res , next) => { 
+res.cookie("userLogin", "", { httpOnly: true, maxAge:0 });
+res.redirect("/");
+}
+
+
 // errors for creating new user
 const handleErrors = (err) => {
 

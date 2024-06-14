@@ -1,6 +1,8 @@
 const express = require("express");
 const authController = require("../controllers/authController");
 const mainRouter = express.Router();
+const {authMiddleware } = require("../controllers/middleware/authMiddleware");
+
 
 //home page
 mainRouter.get("/", (req, res) => {
@@ -17,9 +19,13 @@ mainRouter.post("/register",  authController.login_post);
 mainRouter.get("/signup",authController.signup_get);
 mainRouter.post("/signup",authController.signup_post);
 
+//logout user
+mainRouter.get("/logout",authController.logout_get);
 
 
-mainRouter.get("/bookingForm", (req, res) => {
+
+
+mainRouter.get("/bookingForm",authMiddleware, (req, res) => {
   res.render("./main/bookingForm" , {title:"Booking Form"});
 });
 

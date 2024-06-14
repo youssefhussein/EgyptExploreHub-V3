@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
   <%- include('partials/head') %>
 
@@ -5,10 +6,10 @@
     <link rel="stylesheet" href="/css/admin/formstuff.css" />
   </head>
 
-  <body>
+  <body class="bg-gray">
     <%- include('partials/nav') %>
+    <div class="container-md">
     <section id="select">
-      <div class="container-md">
         <div class="row gx-5">
           <div class="col py-2">
             <h3 class="border-bottom text-center py-2">Select the operation</h3>
@@ -40,9 +41,23 @@
               <label class="btn btn-outline-danger" for="vbtn-radio3"
                 >Remove Client</label
               >
+
+              <input
+              type="radio"
+              class="btn-check"
+              name="vbtn-radio"
+              id="vbtn-radio3"
+              onclick="viewClient()"
+            />
+            <label class="btn btn-outline-danger" for="vbtn-radio3"
+              >View Clients</label
+            >
+
+
+
+
             </div>
           </div>
-          
 
           <div class="col py-5">
             <!-- iframe here -->
@@ -53,11 +68,6 @@
       </div>
     </section>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
     <script src="/js/admin_js/editpackage.js"></script>
     <script src="/js/admin_js/editclient.js"></script>
   </body>
