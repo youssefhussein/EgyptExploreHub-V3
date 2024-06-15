@@ -6,64 +6,77 @@
     <link rel="stylesheet" href="/css/admin/formstuff.css" />
   </head>
 
-  <body class="bg-gray">
+  <body class="bg-gray" >
     <%- include('partials/nav') %>
     <div class="container-md">
     <section id="select">
         <div class="row gx-5">
-          <div class="col py-2">
-            <h3 class="border-bottom text-center py-2">Select the operation</h3>
+          <div class="col-12 py-2">
+            <h3 class="border-bottom text-center py-3 text-light">Select the operation
+
+
+
+              
+                          <div
+                            class="btn-group-horizantal  ps-3 d-inline-block justify-content-center"
+                            role="group"
+                          >
+                            <input
+                              type="radio"
+                              class="btn-check"
+                              name="vbtn-radio"
+                              id="vbtn-radio1"
+                              onclick="addClient() "
+                            />
+                            <label class="btn btn-outline-primary" for="vbtn-radio1"
+                              >Add Client</label
+                            >
+              
+                            <input
+                              type="radio"
+                              class="btn-check"
+                              name="vbtn-radio"
+                              id="vbtn-radio3"
+                              onclick="removeClient()"
+                            />
+                            <label class="btn btn-outline-primary" for="vbtn-radio3"
+                              >Remove Client</label
+                            >
+              
+                            <input
+                            type="radio"
+                            class="btn-check"
+                            name="vbtn-radio"
+                            id="vbtn-radio3"
+                            onclick="viewClient()"
+                          />
+                          <label class="btn btn-outline-primary" for="vbtn-radio3"
+                            >View Clients</label
+                          >
+              
+              
+                          
+                          
+                        </div>
+
+
+
+            </h3>  
+
+
+
+
+
+
             <div class="py-3"></div>
             <!-- select what u want here -->
-
-            <div
-              class="btn-group-vertical ps-3 d-flex justify-content-center"
-              role="group"
-            >
-              <input
-                type="radio"
-                class="btn-check"
-                name="vbtn-radio"
-                id="vbtn-radio1"
-                onclick="addClient() "
-              />
-              <label class="btn btn-outline-danger" for="vbtn-radio1"
-                >Add Client</label
-              >
-
-              <input
-                type="radio"
-                class="btn-check"
-                name="vbtn-radio"
-                id="vbtn-radio3"
-                onclick="removeClient()"
-              />
-              <label class="btn btn-outline-danger" for="vbtn-radio3"
-                >Remove Client</label
-              >
-
-              <input
-              type="radio"
-              class="btn-check"
-              name="vbtn-radio"
-              id="vbtn-radio3"
-              onclick="viewClient()"
-            />
-            <label class="btn btn-outline-danger" for="vbtn-radio3"
-              >View Clients</label
-            >
-
-
-
-
-            </div>
-          </div>
-
-          <div class="col py-5">
-            <!-- iframe here -->
-            <div class="py-3"></div>
-            <iframe frameborder="2" id="frame" title="myframe"></iframe>
-          </div>
+        </div>
+        
+                  <div class=" ratio ratio-16x9">
+                    <!-- iframe here -->
+                    <div class="py-3"></div>
+                    <iframe frameborder="2" id="frame" title="myframe" class=" bg-gray  py-3"></iframe>
+                  </div>
         </div>
       </div>
     </section>
