@@ -29,6 +29,8 @@ Project members:
 
 # TODO
 
+## Put your @ next to the task you are working on. Add any feature you want to add to the project
+
 - [X] PUT the files in the correct FOLDERS
 - [X] Adapt ejs functionality (includes)
 - [X] Create database
@@ -36,18 +38,18 @@ Project members:
 - [X] User authentication
 - [X] User authorization
 - [X] Admin authorization
-- [ ] Deploy ask zyad for his cheats on enabling microsoft azure. worst case scenario, we can use heroku/digital ocean/ google cloud /vercel
+- [ ] Deploy ask zyad for his cheats on enabling microsoft azure. worst case scenario, we can use heroku/digital ocean/ google cloud /vercel  - @youssefhussein
 - [ ] Add a map input for the admin to add packages
 - [ ] Create a package details view
 - [ ] Fix a booking form
-- [ ] Render packages in the db to the frontend (with a map)
+- [ ] Render packages in the db to the frontend (with a google map)
 - [X] Fix styling
-- [ ] Add email newsletter with nodemailer or resend
+- [ ] Add email newsletter with nodemailer or resend - @youssefhussein @Zeyad-Tantawy1
 - [ ] Add a contact page
 - [ ] Slower background video
 - [ ] Create simple express api for package inforamtion -BONUS
 - [ ] Group chat for people that bought the same package - BONUS
-
+- [ ] Add animations to the home page
 
 ### Check these
 
