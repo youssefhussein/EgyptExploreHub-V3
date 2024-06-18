@@ -1,0 +1,7 @@
+node_modules
+sass
+.env.example
+.gitignore
+.eslintrc.json
+README.md
+.vscode/
