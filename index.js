@@ -1,7 +1,7 @@
 const express = require('express')
 const mongoose = require('mongoose');
 const cookieParser = require('cookie-parser');
-const serverless = require('serverless-http');
+
 require('dotenv').config()
 
 const PORT = process.env.PORT || 3000;
@@ -37,4 +37,3 @@ app.use('/', mainRoute);
 
 app.use('/admin', adminRoute); 
 
-export const handler = serverless(app);
