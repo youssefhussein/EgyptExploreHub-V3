@@ -136,3 +136,4 @@ eslint.config.mjs
 # Local Netlify folder
 .netlify
 .vercel
+app.yaml

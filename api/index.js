@@ -31,7 +31,7 @@ mongoose.connect(url)
 
 //routes
 
-//app.get('*',checkUser)
+app.get('*',checkUser)
 
 app.use('/', mainRoute); 
 
