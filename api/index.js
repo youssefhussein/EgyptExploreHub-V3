@@ -5,7 +5,7 @@ const cookieParser = require('cookie-parser');
 require('dotenv').config()
 
 const PORT = process.env.PORT || 3000;
-const {checkUser} = require('./controllers/middleware/authMiddleware');
+const {checkUser} = require('../controllers/middleware/authMiddleware');
 
 //setting the ejs folder and public folder
 const app = express()
@@ -20,8 +20,8 @@ app.use(cookieParser())
 
 //routing
 
-const adminRoute = require('./routes/admin')
-const mainRoute = require('./routes/main');
+const adminRoute = require('../routes/admin')
+const mainRoute = require('../routes/main');
 const url = process.env.DB_URL
 
 //connecting to db
@@ -37,3 +37,4 @@ app.use('/', mainRoute);
 
 app.use('/admin', adminRoute); 
 
+module.exports = app
