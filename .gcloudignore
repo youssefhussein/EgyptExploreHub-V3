@@ -5,3 +5,8 @@ sass
 .eslintrc.json
 README.md
 .vscode/
+.env
+.git/
+.github/
+public/css/common/main.css.map
+public/css/common/main.min.css.map
