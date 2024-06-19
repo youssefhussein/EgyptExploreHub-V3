@@ -29,8 +29,12 @@ mainRouter.get("/bookingForm",authMiddleware, (req, res) => {
   res.render("./main/bookingForm" , {title:"Booking Form"});
 });
 
+mainRouter.get("/accManagement",authMiddleware, (req, res) => {
+  res.render("./main/accManagement" );
+});
 
-
-
+mainRouter.get("/changePass",authMiddleware, (req, res) => {
+  res.render("./main/changePass" );
+});
 
 module.exports = mainRouter;

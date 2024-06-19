@@ -1,0 +1,57 @@
+:root {
+    --white: #ffffff;
+    --fs-5: 16px;
+    --padding: 8px 18px;
+    --border-width: 2px;
+    --transition: all 0.3s ease;
+    --bright-navy-blue: #f0b44c;
+    --yale-blue: #f0b44c;
+      background: #fffffc;
+}
+
+
+.general{
+    display: grid;
+    height: 50%;
+    margin: 0px;
+    justify-content: center;
+    align-items: center;
+    
+}
+/* Base button styles */
+.btn {
+    color: var(--white);
+    text-transform: uppercase;
+    font-size: var(--fs-5);
+    border-radius: 100px;
+    padding: var(--padding);
+    border: var(--border-width) solid transparent;
+    transition: var(--transition);
+    display: inline-block;
+    text-align: center;
+    width: 200px; /* Set a fixed width based on the widest text */
+    margin-bottom: 0px; /* Space between buttons vertically */
+    
+    
+}
+
+/* Primary button styles */
+.btn-primary {
+    background: var(--bright-navy-blue);
+    border-color: var(--bright-navy-blue);
+}
+
+.btn-primary:is(:hover, :focus) {
+    background: transparent;
+    border-color: var(--yale-blue);
+    color: black; 
+}
+
+/* Secondary button styles */
+.btn-secondary {
+    border-color: var(--white);
+}
+
+.btn-secondary:is(:hover, :focus) {
+    background: hsla(0, 0%, 100%, 0.1);
+}
