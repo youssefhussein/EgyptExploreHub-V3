@@ -33,8 +33,9 @@ mainRouter.get("/accManagement",authMiddleware, (req, res) => {
   res.render("./main/accManagement" );
 });
 
-mainRouter.get("/changePass",authMiddleware, (req, res) => {
+mainRouter.get("/changePass", (req, res) => {
   res.render("./main/changePass" );
 });
+
 
 module.exports = mainRouter;
