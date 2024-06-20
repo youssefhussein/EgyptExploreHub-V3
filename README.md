@@ -38,11 +38,11 @@ Project members:
 - [X] User authentication
 - [X] User authorization
 - [X] Admin authorization
-- [ ] Deploy ask zyad for his cheats on enabling microsoft azure. worst case scenario, we can use heroku/digital ocean/ google cloud /vercel  - @youssefhussein
-- [ ] Add a map input for the admin to add packages 
+- [X] Deploy
+- [ ] Add a map input for the admin to add packages -@youssefhussein
 - [ ] Create a package details view
 - [ ] Fix a booking form
-- [ ] Add user account management view 
+- [ ] Add user account management view -@HassanZerkallah
 - [ ] Render packages in the db to the frontend (with a google map)
 - [X] Fix styling
 - [ ] Add email newsletter with nodemailer or resend - @youssefhussein @Zeyad-Tantawy1

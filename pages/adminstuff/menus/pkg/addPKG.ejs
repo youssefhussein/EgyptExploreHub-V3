@@ -2,23 +2,33 @@
 <html lang="en">
   <%- include('../../partials/head') %>
   <body class="bg-gray">
-    <form class="dark mb-3 px-5" method="POST" action="/admin/addpkg_post">
+
+
+
+    <form class="dark mb-3 px-5 needs-validation"   id="addpk" novalidate>
+
       <div class="mb-3 px-5 pt-5">
         <div class="form-floating">
           <input type="text" class="form-control" id="name" name="pname" required />
           <label for="name" class="form-label">Package Name</label>
+          <div id="name-succ" class="valid-tooltip " > Looks good!</div>
+          <div id="name-error" class="invalid-tooltip" > Add a name</div>
         </div>
       </div>
       <div class="mb-3 px-5">
         <div class="form-floating">
           <input type="text" class="form-control" id="location" name="plocation" required />
           <label for="location" class="form-label">Location</label>
+          <div id="location-succ" class="valid-tooltip" > Looks good!</div>
+          <div id="location-error" class="invalid-tooltip" > Add a location</div>
         </div>
       </div>
       <div class="mb-3 px-5">
         <div class="form-floating">
           <input type="number" class="form-control" id="price" name="pprice" required />
           <label for="price" class="form-label">Price</label>
+          <div id="price-succ" class="valid-tooltip" > Looks good</div>
+          <div id="price-error" class="invalid-tooltip" > Add a price</div>
         </div>
       </div>
 
@@ -33,18 +43,24 @@
             required
           ></textarea>
           <label for="Description" class="form-label"> Description</label>
+          <div id="desc-succ" class="valid-tooltip" > Looks good</div>
+          <div id="desc-error" class="invalid-tooltip" > Add a descrption</div>
         </div>
       </div>
       <div class="mb-3 px-5">
         <div class="form-floating">
           <input type="date" class="form-control" id="startDATE" name="pstartDate" required />
           <label for="startDATE" class="form-label">Start</label>
+          <div id="start-succ" class="valid-tooltip" > Looks good</div>
+          <div id="start-error" class="invalid-tooltip" > Add a starting date</div>
         </div>
       </div>
       <div class="mb-3 px-5">
         <div class="form-floating">
           <input type="date" class="form-control" id="endDATE" name="pendDate" required />
           <label for="endDATE" class="form-label">End</label>
+          <div id="end-succ" class="valid-tooltip" > Looks good</div>
+          <div id="end-error" class="invalid-tooltip" > Add an end date</div>
         </div>
       </div>
 
@@ -52,5 +68,11 @@
         
     </input>
     </form>
+    
+    <script 
+    src="https://maps.googleapis.com/maps/api/js?key=<%= process.env.MAPS %>&loading=async&libraries=places&callback=initAutocomplete">
+  </script>
+  <script  src="/js/admin_js/addpkg_map.js"></script>
+
   </body>
 </html>

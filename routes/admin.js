@@ -7,9 +7,31 @@ adminRouter.use(express.json());
 adminRouter.use(bodyParser.urlencoded({ extended: true }));
 
 
+
+
+adminRouter.post("/addpkg_post", Packagecontrol.addpkg_post);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //middleware to check if user is admin
 adminRouter.use((req, res, next) => {
-  
+  if(!res.locals.user)
+    res.redirect("/register");
+
 if( typeof res.locals.user != "undefined" && res.locals.user.category === "Admin"){
   next();
 }else{
@@ -56,5 +78,10 @@ adminRouter.get("/test", (req, res) => {
   res.render("./adminstuff/test", { title: "Test" });
 });
 
-adminRouter.post("/addpkg_post", Packagecontrol.addpkg_post);
+adminRouter.get("/blank", (req, res) => {
+  res.render("./adminstuff/partials/blank", { title: "" });
+});
+
+
+
 module.exports = adminRouter;
