@@ -1,7 +1,6 @@
 const Package = require("../models/packages");
 const path = require("path");
 const fs = require("fs");
-const { log } = require("console");
 
 //display all packages
 module.exports.allpkg_get = async (req, res) => {
@@ -43,9 +42,9 @@ console.log(pname, lat,lng, placeName, pprice, pdesc, pstartDate, pendDate);
    
   } catch (err) {
     console.log("fail package added");
-    console.log(err);
+    
 if(err.message){
-console.log(err.message);
+
 
 }
 
