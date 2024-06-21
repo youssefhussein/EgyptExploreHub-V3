@@ -13,20 +13,6 @@ adminRouter.post("/addpkg_post", Packagecontrol.addpkg_post);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //middleware to check if user is admin
 adminRouter.use((req, res, next) => {
   if(!res.locals.user)

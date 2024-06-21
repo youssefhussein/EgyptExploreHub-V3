@@ -10,7 +10,10 @@ const userSchema = new mongoose.Schema({
     lowercase: true,
     minlength: 3,
   },
-
+  tel: {
+    type: String,
+    required: true
+  },
   email: {
     type: String,
     required: [true, "Email required"],
@@ -39,20 +42,42 @@ const userSchema = new mongoose.Schema({
     enum: { values: ["Male", "Female"] },
     required: [true, "Gender required"],
   },
+  Image: {
+    type: String,
+    default: 'default-profile.jpg' 
+  },
+  // Type: {
+  //   type: String,
+  //   required: true
+  // },
+
   category: {
     type: String,
     enum: { values: ["Client", "Admin"] },
     required: true,
     default: "Client",
   },
-  newsletter: {
-    type: Boolean,
-    default: false,
-  },
+ 
   packagesBought: {
     type: [package],
   },
-});
+  balance: { type: Number, default: 0 },
+  points: { type: Number, default: 0 },
+  orderHistory: { type: Array, default: [] },
+  interactionHistory: { type: Array, default: [] },
+
+
+  createdAt: {
+    type: Date,
+    default: Date.now()
+  },
+  updatedAt: {
+    type: Date,
+    default: Date.now()
+  }
+}, { timestamps: true });
+
+// });
 
 //hashing password bcrypt
 userSchema.pre("save", async function (next) {

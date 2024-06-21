@@ -1,27 +1,122 @@
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+<!-- <link rel="stylesheet" href="/public/css/main/accMenu.css"> -->
+<link rel="stylesheet" href="/public/css/main/style.css">
 <header class="header" data-header>
 
-    <div class="overlay" data-overlay></div>
+  <div class="overlay" data-overlay></div>
 
-    <div class="header-bottom">
+  <div class="header-bottom">
       <div class="container">
+          <nav class="navbar nav-fixed" data-navbar>
+              <div class="navbar-top">
+                  <a href="#" class="logo">
+                      <img src="/assets/images/logo-blue.svg" alt="Tourly logo">
+                  </a>
+                  <button class="nav-close-btn" aria-label="Close Menu" data-nav-close-btn>
+                      <ion-icon name="close-outline"></ion-icon>
+                  </button>
+              </div>
 
-        <nav class="navbar  nav-fixed" data-navbar>
+              <ul class="navbar-list">
+                  <li><a href="/" class="navbar-link" data-nav-link>Home</a></li>
+                  <li><a href="/#about" class="navbar-link" data-nav-link>About Us</a></li>
+                  <li><a href="/#daily-tours" class="navbar-link" data-nav-link>Hot Deals</a></li>
+                  <li><a href="/#packages" class="navbar-link" data-nav-link>Packages</a></li>
+                  <li><a href="/#hotdeals" class="navbar-link" data-nav-link>Hot Deals</a></li>
+                  <li><a href="/pages/main/contactus.ejs" class="navbar-link" data-nav-link>Contact Us</a></li>
+              </ul>
+          </nav>
 
-          <div class="navbar-top">
+          <% if (user) { %>
+              <h3>Welcome <%= user.fullname %></h3>
 
-            <a href="#" class="logo">
-              <img src="/assets/images/logo-blue.svg" alt="Tourly logo">
+<<<<<<< HEAD
+              <script>
+                  document.addEventListener('DOMContentLoaded', function () {
+        let profileDropdownList = document.querySelector(".profile-dropdown-list");
+        let btn = document.querySelector(".profile-dropdown-btn");
+=======
+            <a href="/" class="logo">
+              <img src="/assets/images/Transparent_logo.png" alt="Tourly logo">
             </a>
+>>>>>>> 366538cfc49ddbee30ee02c9ee4739ec7c142f44
 
-            <button class="nav-close-btn" aria-label="Close Menu" data-nav-close-btn>
-              <ion-icon name="close-outline"></ion-icon>
-            </button>
+        btn.addEventListener("click", function () {
+            profileDropdownList.classList.toggle("active");
+        });
 
-          </div>
+        window.addEventListener("click", function (e) {
+            if (!btn.contains(e.target)) {
+                profileDropdownList.classList.remove("active");
+            }
+        }); 
+    });
+              </script>
+              <!-- <script src="/public/js/main/profile.js"></script> -->
 
-          <ul class="navbar-list">
+              <nav class="navbar">
+                  <div class="profile-dropdown">
+                      <div onclick="toggle()" class="profile-dropdown-btn">
+                          <div class="profile-img">
+                              <i class="fa-solid fa-circle"></i>
+                          </div>
+                          <span>
+                            <%= user.fullname %>
+                              <i class="fa-solid fa-angle-down"></i>
+                          </span>
+                      </div>
+                      <ul class="profile-dropdown-list">
+                          <li class="profile-dropdown-list-item">
+                       
+                              <a href="profile">
+                                  <i class="fa-regular fa-user"></i>
+                                   Profile
+                              </a>
+                          </li>
+                          <li class="profile-dropdown-list-item">
+                              <a href="Inbox">
+                                  <i class="fa-regular fa-envelope"></i>
+                                  Inbox
+                              </a>
+                          </li>
+                          <li class="profile-dropdown-list-item">
+                              <a href="History">
+                                  <i class="fa-solid fa-chart-line"></i>
+                                  History
+                              </a>
+                          </li>
+                          <li class="profile-dropdown-list-item">
+                              <a href="settings">
+                                  <i class="fa-solid fa-sliders"></i>
+                                  Settings
+                              </a>
+                          </li>
+                          <li class="profile-dropdown-list-item">
+                              <a href="helpAndSupport">
+                                  <i class="fa-regular fa-circle-question"></i>
+                                  Help & Support
+                              </a>
+                          </li>
+                          <hr />
+                          <li class="profile-dropdown-list-item">
+                              <a href="logout">
+                                  <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                                  Log out
+                              </a>
+                          </li>
+                      </ul>
+                  </div>
+              </nav>
 
+<<<<<<< HEAD
+              <% if (user.category === "Admin") { %>
+                  <button class="navLog"><a href="admin" class="btn btn-primary">Admin</a></button>
+              <% } %>
+          <% } else { %>
+              <button class="navLog"><a href="register" class="btn btn-primary">Login</a></button>
+              <button class="navLog"><a href="signup" class="btn btn-primary">Signup</a></button>
+          <% } %>
+=======
             <li>
               <a href="/" class="navbar-link" data-nav-link>home</a>
             </li>
@@ -48,9 +143,10 @@
 
         </nav>
         <% if (user) { %>
-         
-          <h3>Welcome <%= user.fullname %></h3>
           <button class="navLog" ><a href = "logout"class="btn btn-primary"> logout</a></button>
+          <button class="navLog" ><a href = "accManagement"class="btn btn-primary"> Manage Account</a></button>
+         
+         
           <% if (user.category === "Admin") { %>
           <button class="navLog" ><a href = "admin"class="btn btn-primary"> admin</a></button>
            
@@ -59,13 +155,9 @@
           <% } else { %> 
             <button class="navLog" ><a href = "register"class="btn btn-primary"> login</a></button>
             <button class="navLog" ><a href = "signup"class="btn btn-primary"> signup</a></button>
-            
             <% } %>
 
+>>>>>>> 366538cfc49ddbee30ee02c9ee4739ec7c142f44
       </div>
-    </div>
-
-  </header>
-
-
-
+  </div>
+</header>

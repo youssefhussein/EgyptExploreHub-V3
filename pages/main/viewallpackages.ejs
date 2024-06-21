@@ -1,508 +1,75 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="public/css/style.css">
- <script src="public/js/random.js"></script>
+<%# this file should have access to all the packs and show 5 packages %>
+<% const numberOfPackages = 2 %>
+<% for( let i = 0; i < numberOfPackages ;  i++ ) { %>
 
-</head>
-<body>
 
-    <header class="header" data-header>
 
-        <div class="overlay" data-overlay></div>
-    
-        <div class="header-bottom">
-          <div class="container">
-    
-            <nav class="navbar  nav-fixed" data-navbar>
-    
-              <div class="navbar-top">
-    
-                <a href="#" class="logo">
-                  <img src="./assets/images/logo-blue.svg" alt="Tourly logo">
-                </a>
-    
-                <button class="nav-close-btn" aria-label="Close Menu" data-nav-close-btn>
-                  <ion-icon name="close-outline"></ion-icon>
-                </button>
-    
-              </div>
-    
-              <ul class="navbar-list">
-    
-                <li>
-                  <a href="#home" class="navbar-link" data-nav-link>home</a>
-                </li>
-    
-                <li>
-                  <a href="#about-us" class="navbar-link" data-nav-link>about us</a>
-                </li>
-    
-                <li>
-                  <a href="#daily-tours" class="navbar-link" data-nav-link>hot deals</a>
-                </li>
-    
-                <li>
-                  <a href="#packages" class="navbar-link" data-nav-link>packages</a>
-                </li>
-                <li>
-                  <a href="pages/converter.html" class="navbar-link" data-nav-link>services</a>
-                </li>
-                <li>
-                  <a href="#footer" class="navbar-link" data-nav-link>contact us</a>
-                </li>
-    
-              </ul>
-    
-            </nav>
-            <button class="btn btn-primary" id="registerButton">Register</button>
-    
-          </div>
-        </div>
-    
-      </header>
-    
-    
-    <section class="package" id="package">
-        <div class="container">
-      
-          <!-- New Section for Daily Egypt Tours -->
-          <div class="package-tours">
-            <h2 class="egypt-package-tours">EGYPT PACKAGE TOURS</h2>
-          </div>
-        </div>
-      </section>
-                  <li>
-                    <div class="package-card">
-      
-                      <figure class="card-banner">
-                        <img src="package1.jpg" alt="Experience The Great Holiday On Beach" loading="lazy">
-                      </figure>
-      
-                      <div class="card-content">
-      
-                        <h3 class="h3 card-title">Experience The Great Holiday On Beach</h3>
-      
-                        <p class="card-text">
-                          Laoreet, voluptatum nihil dolor esse quaerat mattis explicabo maiores, est aliquet porttitor! Eaque,
-                          cras, aspernatur.
-                        </p>
-      
-                        <ul class="card-meta-list">
-      
-                          <li class="card-meta-item">
-                            <div class="meta-box">
-                              <ion-icon name="time"></ion-icon>
-      
-                              <p class="text">7D/6N</p>
-                            </div>
-                          </li>
-      
-                          <li class="card-meta-item">
-                            <div class="meta-box">
-                              <ion-icon name="people"></ion-icon>
-      
-                              <p class="text">pax: 10</p>
-                            </div>
-                          </li>
-      
-                          <li class="card-meta-item">
-                            <div class="meta-box">
-                              <ion-icon name="location"></ion-icon>
-      
-                              <p class="text">Malaysia</p>
-                            </div>
-                          </li>
-      
-                        </ul>
-      
-                      </div>
-      
-                      <div class="card-price">
-      
-                        <div class="wrapper">
-      
-                          <p class="reviews">(25 reviews)</p>
-      
-                          <div class="card-rating">
-                            <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star"></ion-icon>
-                          </div>
-      
-                        </div>
-      
-                        <p class="price">
-                          $750
-                          <span>/ per person</span>
-                        </p>
-      
-                        <button class="btn btn-secondary">Book Now</button>
-      
-                      </div>
-      
-                    </div>
-                  </li>
-      
-                  <li>
-                    <div class="package-card">
-      
-                      <figure class="card-banner">
-                        <img src="package2.jpg" alt="Summer Holiday To The Oxolotan River" loading="lazy">
-                      </figure>
-      
-                      <div class="card-content">
-      
-                        <h3 class="h3 card-title">Summer Holiday To The Oxolotan River</h3>
-      
-                        <p class="card-text">
-                          Laoreet, voluptatum nihil dolor esse quaerat mattis explicabo maiores, est aliquet porttitor! Eaque,
-                          cras, aspernatur.
-                        </p>
-      
-                        <ul class="card-meta-list">
-      
-                          <li class="card-meta-item">
-                            <div class="meta-box">
-                              <ion-icon name="time"></ion-icon>
-      
-                              <p class="text">7D/6N</p>
-                            </div>
-                          </li>
-      
-                          <li class="card-meta-item">
-                            <div class="meta-box">
-                              <ion-icon name="people"></ion-icon>
-      
-                              <p class="text">pax: 10</p>
-                            </div>
-                          </li>
-      
-                          <li class="card-meta-item">
-                            <div class="meta-box">
-                              <ion-icon name="location"></ion-icon>
-      
-                              <p class="text">Malaysia</p>
-                            </div>
-                          </li>
-      
-                        </ul>
-      
-                      </div>
-      
-                      <div class="card-price">
-      
-                        <div class="wrapper">
-      
-                          <p class="reviews">(20 reviews)</p>
-      
-                          <div class="card-rating">
-                            <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star"></ion-icon>
-                          </div>
-      
-                        </div>
-      
-                        <p class="price">
-                          $520
-                          <span>/ per person</span>
-                        </p>
-      
-                        <button class="btn btn-secondary">Book Now</button>
-      
-                      </div>
-      
-                    </div>
-                  </li>
-      
-                  <li>
-                    <div class="package-card">
-      
-                      <figure class="card-banner">
-                        <img src="package3.jpg" alt="Santorini Island's Weekend Vacation" loading="lazy">
-                      </figure>
-      
-                      <div class="card-content">
-      
-                        <h3 class="h3 card-title">Santorini Island's Weekend Vacation</h3>
-      
-                        <p class="card-text">
-                          Laoreet, voluptatum nihil dolor esse quaerat mattis explicabo maiores, est aliquet porttitor! Eaque,
-                          cras, aspernatur.
-                        </p>
-      
-                        <ul class="card-meta-list">
-      
-                          <li class="card-meta-item">
-                            <div class="meta-box">
-                              <ion-icon name="time"></ion-icon>
-      
-                              <p class="text">7D/6N</p>
-                            </div>
-                          </li>
-      
-                          <li class="card-meta-item">
-                            <div class="meta-box">
-                              <ion-icon name="people"></ion-icon>
-      
-                              <p class="text">pax: 10</p>
-                            </div>
-                          </li>
-      
-                          <li class="card-meta-item">
-                            <div class="meta-box">
-                              <ion-icon name="location"></ion-icon>
-      
-                              <p class="text">Malaysia</p>
-                            </div>
-                          </li>
-      
-                        </ul>
-      
-                      </div>
-      
-                      <div class="card-price">
-      
-                        <div class="wrapper">
-      
-                          <p class="reviews">(40 reviews)</p>
-      
-                          <div class="card-rating">
-                            <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star"></ion-icon>
-                          </div>
-      
-                        </div>
-      
-                        <p class="price">
-                          $660
-                          <span>/ per person</span>
-                        </p>
-      
-                        <button class="btn btn-secondary">Book Now</button>
-      
-                      </div>
-      
-                    </div>
-                  </li>
-      
-                  <li>
-                    <div class="package-card">
-      
-                      <figure class="card-banner">
-                        <img src="package3.jpg" alt="Santorini Island's Weekend Vacation" loading="lazy">
-                      </figure>
-      
-                      <div class="card-content">
-      
-                        <h3 class="h3 card-title">Santorini Island's Weekend Vacation</h3>
-      
-                        <p class="card-text">
-                          Laoreet, voluptatum nihil dolor esse quaerat mattis explicabo maiores, est aliquet porttitor! Eaque,
-                          cras, aspernatur.
-                        </p>
-      
-                        <ul class="card-meta-list">
-      
-                          <li class="card-meta-item">
-                            <div class="meta-box">
-                              <ion-icon name="time"></ion-icon>
-      
-                              <p class="text">7D/6N</p>
-                            </div>
-                          </li>
-      
-                          <li class="card-meta-item">
-                            <div class="meta-box">
-                              <ion-icon name="people"></ion-icon>
-      
-                              <p class="text">pax: 10</p>
-                            </div>
-                          </li>
-      
-                          <li class="card-meta-item">
-                            <div class="meta-box">
-                              <ion-icon name="location"></ion-icon>
-      
-                              <p class="text">Malaysia</p>
-                            </div>
-                          </li>
-      
-                        </ul>
-      
-                      </div>
-      
-                      <div class="card-price">
-      
-                        <div class="wrapper">
-      
-                          <p class="reviews">(40 reviews)</p>
-      
-                          <div class="card-rating">
-                            <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star"></ion-icon>
-                          </div>
-      
-                        </div>
-      
-                        <p class="price">
-                          $660
-                          <span>/ per person</span>
-                        </p>
-      
-                        <button class="btn btn-secondary">Book Now</button>
-      
-                      </div>
-      
-                    </div>
-                  </li>
-                  
-                  <li>
-                    <div class="package-card">
-      
-                      <figure class="card-banner">
-                        <img src="package3.jpg" alt="Santorini Island's Weekend Vacation" loading="lazy">
-                      </figure>
-      
-                      <div class="card-content">
-      
-                        <h3 class="h3 card-title">Santorini Island's Weekend Vacation</h3>
-      
-                        <p class="card-text">
-                          Laoreet, voluptatum nihil dolor esse quaerat mattis explicabo maiores, est aliquet porttitor! Eaque,
-                          cras, aspernatur.
-                        </p>
-      
-                        <ul class="card-meta-list">
-      
-                          <li class="card-meta-item">
-                            <div class="meta-box">
-                              <ion-icon name="time"></ion-icon>
-      
-                              <p class="text">7D/6N</p>
-                            </div>
-                          </li>
-      
-                          <li class="card-meta-item">
-                            <div class="meta-box">
-                              <ion-icon name="people"></ion-icon>
-      
-                              <p class="text">pax: 10</p>
-                            </div>
-                          </li>
-      
-                          <li class="card-meta-item">
-                            <div class="meta-box">
-                              <ion-icon name="location"></ion-icon>
-      
-                              <p class="text">Malaysia</p>
-                            </div>
-                          </li>
-      
-                        </ul>
-      
-                      </div>
-      
-                      <div class="card-price">
-      
-                        <div class="wrapper">
-      
-                          <p class="reviews">(40 reviews)</p>
-      
-                          <div class="card-rating">
-                            <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star"></ion-icon>
-                          </div>
-      
-                        </div>
-      
-                        <p class="price">
-                          $660
-                          <span>/ per person</span>
-                        </p>
-      
-                        <button class="btn btn-secondary">Book Now</button>
-      
-                      </div>
-      
-                    </div>
-                  </li>
 
-                </ul>
-      
-      
-              </div>
-            </section>
-            
+ <%# gets the first 64 words of the description %>
+<% const sixtyWordDesc = packs[i].description.split(/\./i).slice(0, 3).join(". ").concat("..."); %>
 
- <!-- footer section starts here  -->
- <footer>
-    <section class="footer" id="footer">
-        <div class="container">
-            <div class="detail">
-                <h3>TravelX</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere in, non praesentium soluta quis enim aperiam aliquam, rem totam porro, vel obcaecati modi architecto error maiores iusto quaerat aut eum.</p>
-                <h5>get in touch</h5>
-                <a href="#">example@mail.com</a>
-                <div class="social">
-                    <a href="#"><i class="fa fa-linkedin-square"></i></a>
-                    <a href="#"><i class="fa fa-facebook-square"></i></a>
-                    <a href="#"><i class="fa fa-twitter-square"></i></a>
-                </div>
-            </div>
-            <div class="about-us">
-                <h4>about us</h4>
-                <li><a href="#">about us</a></li>
-                <li><a href="#">our term</a></li>
-                <li><a href="#">careers <span>we're hiring!</span></a></li>
-                <li><a href="#">mission and values</a></li>
-                <li><a href="#">partnerships</a></li>
-            </div>
-            <div class="about-us">
-                <h4>help</h4>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">booking guide</a></li>
-                <li><a href="#">cancellation policy</a></li>
-                <li><a href="#">site map</a></li>
-            </div>
-            <div class="about-us">
-                <h4>Resources</h4>
-                <li><a href="#">newsletter</a></li>
-                <li><a href="#">blog</a></li>
-                <li><a href="#">gallery</li>
-                <li><a href="#">offers</a></li>
-            </div>
-        </div>
+
+  <li>
+    <div class="package-card">
   
-        <div class="copyright">
-            <div>
-                &copy;2024 - TravelX, inc, all rights reserved
-            </div>
-            <div>
-                <a href="#">term & conditions</a>
-                <a href="#">privacy policy</a>
-            </div>
-        </div>
-    </section>
-  </footer>
-  <!-- footer section ends here  -->
+      <figure class="card-banner"  onclick="window.location.href='/package/<%= packs[i]._id %>'">
+        <img src="/assets/images/package1.jpg" alt= <%= packs[i].name %> loading="lazy" >
+      </figure>
   
-        </body>
-</html>
+      <div class="card-content">
+  
+        <h3 class="h3 card-title"> <%= packs[i].name %> </h3>
+  
+        <p class="card-text">
+         <%= sixtyWordDesc %>
+        </p>
+  
+        <ul class="card-meta-list">
+  
+          <li class="card-meta-item">
+            <div class="meta-box">
+              <ion-icon name="time"></ion-icon>
+  
+              <p class="text">7D/6N</p>
+            </div>
+          </li>
+  
+          <li class="card-meta-item">
+            <div class="meta-box">
+              <ion-icon name="people"></ion-icon>
+  
+              <p class="text">pax: 10</p>
+            </div>
+          </li>
+  
+          <li class="card-meta-item">
+            <div class="meta-box">
+              <ion-icon name="location"></ion-icon>
+  
+              <p class="text"> <%= packs[i].location %> </p>
+            </div>
+          </li>
+  
+        </ul>
+  <a href="/package/<%= packs[i]._id %>" class="card-text" style="text-align: center; padding-top: 10%;">Learn More</a>
+      </div>
+  
+      <div class="card-price">
+  
+     
+        <p class="price">
+          £ <%= packs[i].price %>
+          <span>/ per person</span>
+        </p>
+  
+         <a href = "bookingForm/<%= packs[i]._id %>"><button class="btn btn-secondary">Book Now</button></a>
+  
+      </div>
+  
+    </div>
+  </li>
+
+
+
+
+  <% } %>
