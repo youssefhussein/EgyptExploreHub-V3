@@ -3,15 +3,15 @@ const Schema = mongoose.Schema;
 const { isAfter, add, isBefore } = require("date-fns");
 
 const packageSchema = Schema({
-  name: { type: String, required: [true,"wat"], unique: true },
-  lat: { type: Number, required: [true,"wat"] },
-  lng: { type: Number, required: [true,"wat"] },
-  location: { type: String, required: [true,"wat"] },
-  price: { type: Number, min: [50, "Must be above 50"], required: [true,"wat"] },
-  description: { type: String, minlength: [20, "Description too short!"] , required: [true,"wat"] },
+  name: { type: String, required: [true,"Add a name"], unique: true },
+  lat: { type: Number, required: [true," "] },
+  lng: { type: Number, required: [true," "] },
+  location: { type: String, required: [true,"Add a location"] },
+  price: { type: Number, min: [50, "Must be above 50"], required: [true,"Add a price"] },
+  description: { type: String, minlength: [20, "Description too short!"] , required: [true,"Add a description"] },
   startAt: {
     type: Date,
-    required: [true, "wat"],
+    required: [true, "Add a starting date"],
     validate: {
       validator: function (v) {
         const now = Date.now();
@@ -23,7 +23,7 @@ const packageSchema = Schema({
   },
   endAt: {
     type: Date,
-    required: [true, "wat"],
+    required: [true, "Add an ending date"],
     validate: {
       validator: function (v) {
         const now = Date.now();

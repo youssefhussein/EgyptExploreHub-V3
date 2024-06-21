@@ -39,13 +39,14 @@ Project members:
 - [X] User authorization
 - [X] Admin authorization
 - [X] Deploy
-- [ ] Add a map input for the admin to add packages -@youssefhussein
-- [ ] Create a package details view
-- [ ] Fix a booking form
+- [X] Add a map input for the admin to add packages - @youssefhussein
+- [ ] Create a package details view  - @youssefhussein
+- [ ] Fix a booking form - @Zeyad-Tantawy1
 - [ ] Add user account management view -@HassanZerkallah
-- [ ] Render packages in the db to the frontend (with a google map)
+- [ ] Render single packages in the db to the frontend (with a google map) - @Zeyad-Tantawy1
 - [X] Fix styling
 - [ ] Add email newsletter with nodemailer or resend - @youssefhussein @Zeyad-Tantawy1
+- [ ] Add picture to package model
 - [ ] Add a contact page
 - [ ] Slower background video
 - [ ] Create simple express api for package inforamtion -BONUS
@@ -55,10 +56,7 @@ Project members:
 ### Check these
 
 isCurrency - validator package npm [npm page](https://www.npmjs.com/package/validator)
+pak._id
 
-
-### For @FatmaNageh
-- [ ] add error message for the form
-- [ ] watch nodejs playlist [Nodejs Crash course express ejs mongodb](https://www.youtube.com/playlist?list=PL4cUxeGkcC9jsz4LDYc6kv3ymONOKxwBU)
-- [ ] revise lectures and labs 2 hours
-- [ ] see the requirements for the project and choose a task
+/pack/:id
+res.render(view1pack , {findbyid(id)})
