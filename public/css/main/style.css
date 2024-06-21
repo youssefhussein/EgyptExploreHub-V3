@@ -551,9 +551,13 @@
     height: 400px;
   }
   .swiper-slide{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
+      font-size: 18px;
+      background: #fff;
+      /* Center content vertically */
+      display: flex;
+      justify-content: center;
+      align-items: center;
   }
   
   .swiper-slide img {
