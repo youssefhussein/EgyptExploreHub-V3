@@ -37,5 +37,8 @@ mainRouter.get("/changePass", (req, res) => {
   res.render("./main/changePass" );
 });
 
+mainRouter.get("/profile", (req, res) => {
+  res.render("./main/profile" );
+});
 
 module.exports = mainRouter;
