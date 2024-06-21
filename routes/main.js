@@ -9,14 +9,6 @@ const userController = require('../controllers/userController')
 mainRouter.get("/", homeController.index_get);
 
 mainRouter.get("/package/:id", homeController.singlepkg_getDetails);
-
-
-
-
-
-
-
-
 //Login page
 
 mainRouter.get("/register",  authController.login_get);
@@ -29,6 +21,12 @@ mainRouter.post("/signup",authController.signup_post);
 //logout user
 mainRouter.get("/logout",authController.logout_get);
 
+mainRouter.post('/bookings', (req, res) => {
+  const newBooking = new Booking(req.body);
+  newBooking.save()
+      .then(() => res.json({ message: 'Booking successful' }))
+      .catch(err => res.status(400).json({ error: err.message }));
+});
 
 
 
@@ -47,7 +45,7 @@ mainRouter.get("/changePass", (req, res) => {
 mainRouter.get("/profile",authMiddleware,userController.getProfile);
 mainRouter.put("/profile",authMiddleware,userController.updateProfile);
 
-app.post('/profile-rote', (req, res) => {
+mainRouter.post('/profile-rote', (req, res) => {
   const { title, snippet, body } = req.body;
 
   const u = new User({
