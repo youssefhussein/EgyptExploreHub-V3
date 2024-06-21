@@ -2,9 +2,9 @@
 const express = require('express');
 const router = express.Router();
 const userController = require('../controllers/userController');
-const { isAuthenticated } = require('../middleware/authMiddleware');
+const { checkUser } = require('../middleware/authMiddleware');
 
-router.get('/profile', isAuthenticated, userController.getProfile);
-router.put('/profile', isAuthenticated, userController.updateProfile);
+router.get('/profile', checkUser, userController.getProfile);
+router.put('/profile', checkUser, userController.updateProfile);
 
 module.exports = router;

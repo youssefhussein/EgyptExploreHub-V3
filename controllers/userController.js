@@ -42,7 +42,7 @@ exports.updateProfile = async (req, res) => {
 
 // controllers/userController.js
 exports.updateProfile = async (req, res) => {
-    const { fullname, tel, email, birthday, gender, password } = req.body;
+    const { fullname, email, birthday, gender, password } = req.body;
     const image = req.file ? req.file.filename : null;
   
     try {
@@ -200,3 +200,4 @@ exports.updateProfile = async (req, res) => {
       }
     }
   }
+
