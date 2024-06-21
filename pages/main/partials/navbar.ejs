@@ -66,30 +66,22 @@
                                    Profile
                               </a>
                           </li>
-                          <li class="profile-dropdown-list-item">
-                              <a href="Inbox">
-                                  <i class="fa-regular fa-envelope"></i>
-                                  Inbox
-                              </a>
-                          </li>
+                        
                           <li class="profile-dropdown-list-item">
                               <a href="History">
                                   <i class="fa-solid fa-chart-line"></i>
                                   History
                               </a>
                           </li>
-                          <li class="profile-dropdown-list-item">
-                              <a href="settings">
-                                  <i class="fa-solid fa-sliders"></i>
-                                  Settings
-                              </a>
-                          </li>
-                          <li class="profile-dropdown-list-item">
-                              <a href="helpAndSupport">
-                                  <i class="fa-regular fa-circle-question"></i>
-                                  Help & Support
-                              </a>
-                          </li>
+                <% if (user.category === "Admin") { %>
+                    <li class="profile-dropdown-list-item">
+                        <a href="/admin">
+                            <i class="fa fa-lock" aria-hidden="true"></i>
+                           Admin
+                        </a>
+                    </li>
+                <% } %>
+                         
                           <hr />
                           <li class="profile-dropdown-list-item">
                               <a href="logout">
@@ -101,9 +93,7 @@
                   </div>
               </nav>
 
-              <% if (user.category === "Admin") { %>
-                  <button class="navLog"><a href="admin" class="btn btn-primary">Admin</a></button>
-              <% } %>
+            
           <% } else { %>
               <button class="navLog"><a href="register" class="btn btn-primary">Login</a></button>
               <button class="navLog"><a href="signup" class="btn btn-primary">Signup</a></button>
