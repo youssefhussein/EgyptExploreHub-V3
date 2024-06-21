@@ -99,22 +99,7 @@ const myUser = await User.findByIdAndUpdate(decoded.id, {fullname,email,birthday
     }
   }
 
-   exports.postEditUser= async(req, res)=> {
-    let { uId, name, phoneNumber } = req.body;
-    if (!uId || !name || !phoneNumber) {
-      return res.json({ message: "All filled must be required" });
-    } else {
-      let currentUser = userModel.findByIdAndUpdate(uId, {
-        name: name,
-        phoneNumber: phoneNumber,
-        updatedAt: Date.now(),
-      });
-      currentUser.exec((err, result) => {
-        if (err) console.log(err);
-        return res.json({ success: "User updated successfully" });
-      });
-    }
-  }
+   
 
    exports.getDeleteUser= async(req, res)=> {
     let { oId, status } = req.body;
