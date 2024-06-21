@@ -18,7 +18,7 @@ const packageSchema = Schema({
         const oneWeek = add(new Date(now), { weeks: 1 });
         return isAfter(v, oneWeek); //must be after 1 week from now
       },
-      message: (props) => `${props.value} is too soon`,
+      message: (props) => `Time must be after a week from now`,
     },
   },
   endAt: {

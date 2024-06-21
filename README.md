@@ -40,13 +40,14 @@ Project members:
 - [X] Admin authorization
 - [X] Deploy
 - [X] Add a map input for the admin to add packages - @youssefhussein
-- [ ] Create a package details view  - @youssefhussein
-- [ ] Fix a booking form - @Zeyad-Tantawy1
-- [ ] Add user account management view -@HassanZerkallah
+- [X] Create a package details view  - @youssefhussein
+- [ ] Fix a booking form - @Salmaa-Elkholy @HassanZerkallah
+- [X] Add user account management view - @HassanZerkallah
+- [ ] Add backend user account management view - @youssefhussein
 - [ ] Render single packages in the db to the frontend (with a google map) - @Zeyad-Tantawy1
 - [X] Fix styling
 - [ ] Add email newsletter with nodemailer or resend - @youssefhussein @Zeyad-Tantawy1
-- [ ] Add picture to package model
+- [ ] Add picture to package model 
 - [ ] Add a contact page
 - [ ] Slower background video
 - [ ] Create simple express api for package inforamtion -BONUS
