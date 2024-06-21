@@ -74,3 +74,44 @@ module.exports.singlepkg_get = async (req, res) => {
 };
 
 
+// update a package
+module.exports.updatepkg_get = async (req, res) => {
+  const { pname, lat, lng, placeName, pprice, pdesc, pstartDate, pendDate } = req.body;
+  const id = req.params.id;
+
+  const data = {
+    name: pname,
+    lat: lat,
+    lng: lng,
+    location: placeName,
+    price: pprice,
+    description: pdesc,
+    startAt: pstartDate,
+    endAt: pendDate,
+    
+  };
+
+  try {
+    const pack = await Package.findByIdAndUpdate(id, data, { new: true });
+    res.status(200).json({ pack });
+    console.log("success package updated");
+  } catch (err) {
+    console.log("fail package updated");
+    res.status(400).json({ errors: err.errors });
+  }
+};
+
+// delete a package
+module.exports.deletepkg_get = async (req, res) => {
+  const id = req.params.id;
+
+  try {
+    await Package.findByIdAndRemove(id);
+    res.status(200).json({ message: "Package deleted successfully" });
+    console.log("success package deleted");
+  } catch (err) {
+    console.log("fail package deleted");
+    res.status(400).json({ err });
+  }
+};
+

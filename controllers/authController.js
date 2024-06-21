@@ -92,3 +92,45 @@ const createToken = (user) => {
   });
   return token;
 };
+
+
+// update a user
+module.exports.updateUser = async (req, res) => {
+  const { fullname, email, password, birthday, gender, Image, category } = req.body;
+  const id = req.params.id;
+
+  try {
+    const user = await User.findByIdAndUpdate(id, {
+      fullname,
+      email,
+      password,
+      birthday,
+      gender,
+      Image,
+      category,
+    }, { new: true });
+    const salt = await bcrypt.genSalt();
+    user.password = await bcrypt.hash(password, salt);
+
+    await user.save();
+
+    const token = createToken(user);
+    res.cookie("userLogin", token, { httpOnly: true, maxAge: 7200000, sameSite: "strict" });
+    res.status(200).json({ user: user._id });
+  } catch (err) {
+    res.status(400).send(handleErrors(err));
+  }
+};
+
+module.exports.deleteUser = async (req, res) => {
+  const id = req.params.id;
+
+  try {
+    await User.findByIdAndRemove(id);
+    res.clearCookie("userLogin");
+    res.status(200).json({ message: "User deleted successfully" });
+  } catch (err) {
+    res.status(400).json({ err });
+  }
+};
+
