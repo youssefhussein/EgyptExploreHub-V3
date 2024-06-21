@@ -23,3 +23,13 @@ module.exports.singlepkg_getDetails = async (req, res) => {
     res.status(400).json({ err });
   }
 };
+
+module.exports.bookingForm_get = async (req, res) => {
+const packs =  await Package.findById(req.params.id);
+
+
+res.render("./main/views-index", {title:"Booking Form",packs});
+
+
+
+}

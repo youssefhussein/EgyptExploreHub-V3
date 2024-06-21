@@ -7,6 +7,7 @@ const priceErr = document.getElementById("price_error");
 const descErr = document.getElementById("description_error");
 const startErr = document.getElementById("startAt_error");
 const endErr = document.getElementById("endAt_error");
+const capErr = document.getElementById("capacity_error");
 
 function initAutocomplete() {
   const autocomplete = new google.maps.places.Autocomplete(
@@ -65,6 +66,7 @@ if(e.keyCode === 13) {return false;} // prevent enter from submitting
   const pdesc = myform.pdesc.value;
   const pstartDate = myform.pstartDate.value;
   const pendDate = myform.pendDate.value;
+  const capacity = myform.capcity.value;
   try {
     const res = await fetch("/admin/addpkg_post", {
       method: "POST",
@@ -80,6 +82,7 @@ if(e.keyCode === 13) {return false;} // prevent enter from submitting
         pdesc,
         pstartDate,
         pendDate,
+        capacity,
       }),
     });
 
@@ -106,6 +109,7 @@ const newKeys = {
   description: 'description_error',
   startAt: 'startAt_error',
   endAt: 'endAt_error',
+  capacity: 'capacity_error',
 };
 
 const renamedObject = renameKeys(errorsMessages, newKeys);
@@ -123,7 +127,7 @@ priceErr.innerHTML = renamedObject.price_error;
 descErr.innerHTML = renamedObject.description_error;
 startErr.innerHTML = renamedObject.startAt_error;
 endErr.innerHTML = renamedObject.endAt_error;
-
+capErr.innerHTML = renamedObject.capacity_error;
 
 
 

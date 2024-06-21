@@ -1,3 +1,5 @@
+
+<%# this page has access to the packs object %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -90,10 +92,10 @@
         <main>
             <section class="Tour details">
                 <img src="https://i0.wp.com/www.touristegypt.com/wp-content/uploads/2023/03/cairo-skyline-scaled-e1678624955553.jpg?resize=1990%2C800&ssl=1" alt="Cairo Tours" class="tour-image">
-                <h2>Cairo tours</h2>
-                <p><strong>Location:</strong> Cairo</p>
-                <p><strong>Price:</strong> $20 per person</p>
-                <p><strong>Capacity:</strong> 10 people</p>
+                <h2><%= packs.name %></h2>
+                <p><strong>Location:</strong> <%= packs.location %></p>
+                <p><strong>Price:</strong> <%= packs.price %> per person</p>
+                <p><strong>Capacity:</strong> <%= packs.capacity %> people</p> <%# add capacity to schema and form %>
                 <p class="description">Discover Cairo's vibrant blend of ancient wonders and modern life on our daily tours. Explore the legendary Pyramids, delve into the Egyptian Museum's treasure trove of artifacts, and immerse yourself in the bustling Khan el-Khalili bazaar for a cultural adventure. Step back in time at Giza and witness the majesty of the Pyramids. Whatever your passion, our Cairo tours offer an unforgettable experience of history and culture.</p>
             </section>
             <section class="booking-form">
@@ -120,7 +122,7 @@
             </section>
         </main>
         <footer>
-            <p>&copy; 2024 TravelWorld</p>
+            <p>&copy; 2024 EgyptExploreHub</p>
         </footer>
     </div>
     <script>

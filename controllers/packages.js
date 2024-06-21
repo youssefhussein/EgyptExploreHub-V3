@@ -21,7 +21,7 @@ module.exports.allpkg_get = async (req, res) => {
 };
 
 module.exports.addpkg_post = async (req, res) => {
-  const { pname, lat,lng, placeName, pprice, pdesc, pstartDate, pendDate } = req.body;
+  const { pname, lat,lng, placeName, pprice, pdesc, pstartDate, pendDate , capacity } = req.body;
 
   const data = {
     name: pname,
@@ -32,6 +32,7 @@ module.exports.addpkg_post = async (req, res) => {
     description: pdesc,
     startAt: pstartDate,
     endAt: pendDate,
+    capacity: capacity,
   };
 
   try {

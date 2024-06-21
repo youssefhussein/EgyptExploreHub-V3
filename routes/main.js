@@ -30,10 +30,7 @@ mainRouter.post('/bookings', (req, res) => {
 
 
 
-mainRouter.get("/bookingForm",authMiddleware, (req, res) => {
-  res.render("./main/bookingForm" , {title:"Booking Form"});
-});
-
+mainRouter.get("/bookingForm/:id",authMiddleware, homeController.bookingForm_get);
 
 mainRouter.get("/changePass", (req, res) => {
   res.render("./main/changePass" );

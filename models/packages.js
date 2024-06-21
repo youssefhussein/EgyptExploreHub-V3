@@ -34,6 +34,7 @@ const packageSchema = Schema({
         `${props.value} package must be at least one day long`,
     },
   },
+  capacity: { type: Number, min: [5, "Must be at least five people so make money"], required: [true,"Add a capacity"], default: 10 },
 });
 
 const Package = mongoose.model("package", packageSchema);
