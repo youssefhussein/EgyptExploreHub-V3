@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Booking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        main {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .tour-details, .booking-form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .tour-details {
+            width: 60%;
+        }
+
+        .tour-image {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .booking-form {
+            width: 35%;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Daily Egypt Tours</h1>
+        </header>
+        <main>
+            <section class="Tour details">
+                <img src="https://i0.wp.com/www.touristegypt.com/wp-content/uploads/2023/03/cairo-skyline-scaled-e1678624955553.jpg?resize=1990%2C800&ssl=1" alt="Cairo Tours" class="tour-image">
+                <h2>Cairo tours</h2>
+                <p><strong>Location:</strong> Cairo</p>
+                <p><strong>Price:</strong> $20 per person</p>
+                <p><strong>Capacity:</strong> 10 people</p>
+                <p class="description">Discover Cairo's vibrant blend of ancient wonders and modern life on our daily tours. Explore the legendary Pyramids, delve into the Egyptian Museum's treasure trove of artifacts, and immerse yourself in the bustling Khan el-Khalili bazaar for a cultural adventure. Step back in time at Giza and witness the majesty of the Pyramids. Whatever your passion, our Cairo tours offer an unforgettable experience of history and culture.</p>
+            </section>
+            <section class="booking-form">
+                <h3>Book Now</h3>
+                <form id="bookingForm">
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Date</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="guests">Guests</label>
+                        <input type="number" id="guests" name="guests" required>
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 TravelWorld</p>
+        </footer>
+    </div>
+    <script>
+        document.getElementById('bookingForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const formData = {
+                fullName: document.getElementById('fullName').value,
+                phone: document.getElementById('phone').value,
+                date: document.getElementById('date').value,
+                guests: document.getElementById('guests').value
+            };
+
+            fetch('/bookings', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert('Booking successful');
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Booking failed');
+            });
+        });
+    </script>
+</body>
+</html>
