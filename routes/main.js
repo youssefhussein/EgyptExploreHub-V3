@@ -46,4 +46,29 @@ mainRouter.get("/changePass", (req, res) => {
 
 mainRouter.get("/profile",authMiddleware,userController.getProfile);
 mainRouter.put("/profile",authMiddleware,userController.updateProfile);
+
+app.post('/profile-rote', (req, res) => {
+  const { title, snippet, body } = req.body;
+
+  const u = new User({
+    fullname,
+    email,
+    password,
+    birthday
+  });
+
+  blog.save()
+    .then(result => {
+      res.status(201).json({ message: 'Blog created successfully', blog: result });
+    })
+    .catch(err => {
+      res.status(500).json({ message: 'Error creating blog', error: err });
+    });
+});
+
+
+
 module.exports = mainRouter;
+
+
+
