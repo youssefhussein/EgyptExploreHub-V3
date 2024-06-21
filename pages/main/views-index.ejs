@@ -83,6 +83,11 @@
             margin-top: 20px;
         }
     </style>
+  
+
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=<%= process.env.MAPS %>&callback=initMap"></script>
+
+
 </head>
 <body>
     <div class="container">
@@ -96,7 +101,61 @@
                 <p><strong>Location:</strong> <%= packs.location %></p>
                 <p><strong>Price:</strong> <%= packs.price %> per person</p>
                 <p><strong>Capacity:</strong> <%= packs.capacity %> people</p> <%# add capacity to schema and form %>
-                <p class="description">Discover Cairo's vibrant blend of ancient wonders and modern life on our daily tours. Explore the legendary Pyramids, delve into the Egyptian Museum's treasure trove of artifacts, and immerse yourself in the bustling Khan el-Khalili bazaar for a cultural adventure. Step back in time at Giza and witness the majesty of the Pyramids. Whatever your passion, our Cairo tours offer an unforgettable experience of history and culture.</p>
+                <p class="description"><%= packs.description %></p>
+<%# time to render a map %>
+<%# need to write the js here cuz ejs sucks %>
+
+<% if (packs) { %>
+ 
+<span id="lat" style="display: none;"><%= packs.lat %></span>
+<span id="lng" style="display: none;"><%= packs.lng %></span>
+
+<% } %>
+
+
+
+
+
+
+<div id="map" style="height: 400px;"></div>
+
+<script>
+   
+   function displayMap() {
+   const mapOptions = {
+     center: { lat: parseFloat(document.getElementById('lat').innerHTML), lng: parseFloat(document.getElementById('lng').innerHTML) },
+     zoom: 18,
+   };
+   const mapElement = document.getElementById('map');
+   const map = new google.maps.Map(mapElement, mapOptions);
+   return map
+ }
+
+
+    function addMarkers(map){
+const location  = {lat: parseFloat(document.getElementById('lat').innerHTML), lng: parseFloat(document.getElementById('lng').innerHTML)};
+const marker = new google.maps.Marker({
+  position: location,
+  map: map, 
+  title: '<%= packs.name %>',
+  
+});
+return marker
+}
+function initMap() {
+const map = displayMap();
+const markers = addMarkers(map);
+    
+
+}
+
+
+
+</script>
+
+
+
+
             </section>
             <section class="booking-form">
                 <h3>Book Now</h3>
