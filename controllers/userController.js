@@ -11,69 +11,30 @@ exports.getProfile = async (req, res) => {
   }
 };
 
-exports.updateProfile = async (req, res) => {
-  const { fullname, tel, email, birthday, gender, password, image } = req.body;
-  try {
-    const user = await User.findById(req.user._id);
 
-    if (!user) {
-      return res.status(404).json({ error: 'User not found' });
-    }
+//post request to update user
+exports.postEditUser = async (req, res) => {
+  const {fullname,email,birthday,password} = req.body;
+try{
+  const {_id} = req.cookies.userLogin;
+  if(_id){
+  jwt.verify(_id, process.env.JWT_SECRET, async (err, decoded) => {
+  if(err){
+  console.log(err);
+  res.status(500).json({error:err})}
+  else{
 
-    user.fullname = fullname || user.fullname;
-    user.tel = tel || user.tel;
-    user.email = email || user.email;
-    user.birthday = birthday || user.birthday;
-    user.gender = gender || user.gender;
-    user.image = image || user.image;
+const myUser = await User.findByIdAndUpdate(decoded.id, {fullname,email,birthday,password});
+  
+}}
+  
 
-    if (password) {
-      const salt = await bcrypt.genSalt();
-      user.password = await bcrypt.hash(password, salt);
-    }
-
-    await user.save();
-    res.status(200).json({ message: 'Profile updated successfully', user });
-  } catch (error) {
-    res.status(500).json({ error: 'Server error' });
-  }
-};
+)}}catch(err){
+  res.status(400).json({error:err})
+}
 
 
-// controllers/userController.js
-exports.updateProfile = async (req, res) => {
-    const { fullname, email, birthday, gender, password } = req.body;
-    const image = req.file ? req.file.filename : null;
-  
-    try {
-      const user = await User.findById(req.user._id);
-  
-      if (!user) {
-        return res.status(404).json({ error: 'User not found' });
-      }
-  
-      user.fullname = fullname || user.fullname;
-      user.tel = tel || user.tel;
-      user.email = email || user.email;
-      user.birthday = birthday || user.birthday;
-      user.gender = gender || user.gender;
-  
-      if (image) {
-        user.image = image;
-      }
-  
-      if (password) {
-        const salt = await bcrypt.genSalt();
-        user.password = await bcrypt.hash(password, salt);
-      }
-  
-      await user.save();
-      res.status(200).json({ message: 'Profile updated successfully', user });
-    } catch (error) {
-      res.status(500).json({ error: 'Server error' });
-    }
-  };
-  
+}
  exports.getAllUser=async(req, res) =>{
     try {
       let Users = await userModel
