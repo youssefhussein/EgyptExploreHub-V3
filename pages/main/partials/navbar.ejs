@@ -28,18 +28,11 @@
           </nav>
 
           <% if (user) { %>
-              <h3>Welcome <%= user.fullname %></h3>
-
-<<<<<<< HEAD
+              
               <script>
                   document.addEventListener('DOMContentLoaded', function () {
         let profileDropdownList = document.querySelector(".profile-dropdown-list");
         let btn = document.querySelector(".profile-dropdown-btn");
-=======
-            <a href="/" class="logo">
-              <img src="/assets/images/Transparent_logo.png" alt="Tourly logo">
-            </a>
->>>>>>> 366538cfc49ddbee30ee02c9ee4739ec7c142f44
 
         btn.addEventListener("click", function () {
             profileDropdownList.classList.toggle("active");
@@ -108,7 +101,6 @@
                   </div>
               </nav>
 
-<<<<<<< HEAD
               <% if (user.category === "Admin") { %>
                   <button class="navLog"><a href="admin" class="btn btn-primary">Admin</a></button>
               <% } %>
@@ -116,48 +108,6 @@
               <button class="navLog"><a href="register" class="btn btn-primary">Login</a></button>
               <button class="navLog"><a href="signup" class="btn btn-primary">Signup</a></button>
           <% } %>
-=======
-            <li>
-              <a href="/" class="navbar-link" data-nav-link>home</a>
-            </li>
-
-            <li>
-              <a href="/#about" class="navbar-link" data-nav-link>about us</a>
-            </li>
-
-            <li>
-              <a href="/#daily-tours" class="navbar-link" data-nav-link>hot deals</a>
-            </li>
-
-            <li>
-              <a href="/#packages" class="navbar-link" data-nav-link>packages</a>
-            </li>
-            <li>
-              <a href="/#hotdeals" class="navbar-link" data-nav-link>hot deals</a>
-            </li>
-            <li>
-              <a href="/#footer" class="navbar-link" data-nav-link>contact us</a>
-            </li>
-
-          </ul>
-
-        </nav>
-        <% if (user) { %>
-          <button class="navLog" ><a href = "logout"class="btn btn-primary"> logout</a></button>
-          <button class="navLog" ><a href = "accManagement"class="btn btn-primary"> Manage Account</a></button>
-         
-         
-          <% if (user.category === "Admin") { %>
-          <button class="navLog" ><a href = "admin"class="btn btn-primary"> admin</a></button>
-           
-          <% } %>
-
-          <% } else { %> 
-            <button class="navLog" ><a href = "register"class="btn btn-primary"> login</a></button>
-            <button class="navLog" ><a href = "signup"class="btn btn-primary"> signup</a></button>
-            <% } %>
-
->>>>>>> 366538cfc49ddbee30ee02c9ee4739ec7c142f44
       </div>
   </div>
 </header>
