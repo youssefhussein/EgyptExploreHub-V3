@@ -20,8 +20,8 @@ app.use(cookieParser())
 
 //routing
 
-const adminRoute = require('../routes/admin')
-const mainRoute = require('../routes/main');
+const adminRouter = require('../routes/admin')
+const mainRouter = require('../routes/main');
 const url = process.env.DB_URL
 
 //connecting to db
@@ -34,8 +34,8 @@ mongoose.connect(url)
 
 app.get('*',checkUser)
 
-app.use('/', mainRoute); 
+app.use('/', mainRouter); 
 
-app.use('/admin', adminRoute); 
+app.use('/admin', adminRouter); 
 
 module.exports = app

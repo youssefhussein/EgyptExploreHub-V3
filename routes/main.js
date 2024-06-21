@@ -44,6 +44,6 @@ mainRouter.get("/changePass", (req, res) => {
   res.render("./main/changePass" );
 });
 
-mainRouter.get("/profile",authController,userController.getProfile);
-mainRouter.put("/profile",authController,userController.updateProfile);
+mainRouter.get("/profile",authMiddleware,userController.getProfile);
+mainRouter.put("/profile",authMiddleware,userController.updateProfile);
 module.exports = mainRouter;
