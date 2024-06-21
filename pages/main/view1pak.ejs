@@ -1,4 +1,7 @@
-<%- include('/partials/head') -%>
-<%- include('/partials/navbar') -%>
-<%- include('/partials/video') -%>
-<%- include('/partials/footer') -%>
+<%# this file should have access to 1 pack using the id %>
+
+<%- include('partials/head') -%>
+<%- include('partials/navbar') -%>
+<%= pack.description %>
+
+<%- include('partials/footer') -%>

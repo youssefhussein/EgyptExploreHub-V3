@@ -7,6 +7,15 @@ const homeController = require('../controllers/homeController')
 //home page
 mainRouter.get("/", homeController.index_get);
 
+mainRouter.get("/package/:id", homeController.singlepkg_getDetails);
+
+
+
+
+
+
+
+
 //Login page
 
 mainRouter.get("/register",  authController.login_get);
