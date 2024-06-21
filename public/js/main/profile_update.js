@@ -38,7 +38,7 @@ passErr.innerHTML = "";
       }),
     });
 const data = await res.json();
-console.log(data);
+
 if(data.errors){
   
   fullnameErr.innerHTML = data.errors.fullname;

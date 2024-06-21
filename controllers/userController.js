@@ -24,6 +24,11 @@ try{
   res.status(500).json({error:err})}
   else{
 
+
+
+
+
+    
 const myUser = await User.findByIdAndUpdate(decoded.id, {fullname,email,birthday,password});
   
 }}
