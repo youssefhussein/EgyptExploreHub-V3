@@ -36,35 +36,17 @@ mainRouter.get("/bookingForm",authMiddleware, (req, res) => {
   res.render("./main/bookingForm" , {title:"Booking Form"});
 });
 
-mainRouter.get("/accManagement",authMiddleware, (req, res) => {
-  res.render("./main/accManagement" );
-});
 
 mainRouter.get("/changePass", (req, res) => {
   res.render("./main/changePass" );
 });
 
-mainRouter.get("/profile",authMiddleware,userController.getProfile);
-mainRouter.put("/profile",authMiddleware,userController.updateProfile);
-
-app.post('/profile-rote', (req, res) => {
-  const { title, snippet, body } = req.body;
-
-  const u = new User({
-    fullname,
-    email,
-    password,
-    birthday
-  });
-
-  blog.save()
-    .then(result => {
-      res.status(201).json({ message: 'Blog created successfully', blog: result });
-    })
-    .catch(err => {
-      res.status(500).json({ message: 'Error creating blog', error: err });
-    });
+mainRouter.get("/profile",authMiddleware,(req, res) => {
+  res.render("./main/profile" , {title:"Profile"});
 });
+
+
+mainRouter.post('/profile-route',authMiddleware ,  userController.postEditUser);
 
 
 

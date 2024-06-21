@@ -1015,45 +1015,32 @@ background-color: var(--gainsboro);
     } */
 </style>
 </head>
-<body>
-    <%- include('partials/navbar') %>
+<body style="padding-left: 5vw; padding-right: 5vw;">
+  
+    <div style="height: 5vh;"></div>
   <!-- views/profile.ejs -->
 <form id="profileForm" action="/users/profile" method="POST" enctype="multipart/form-data">
     <div>
       <label for="fullname">Full Name</label>
       <input type="text" id="fullname" name="fullname" value="<%= user.fullname %>">
+      <div id="fullnameErr"></div>
     </div>
-    <div>
-      <label for="tel">Telephone</label>
-      <input type="text" id="tel" name="tel" value="<%= user.tel %>">
-    </div>
+    
     <div>
       <label for="email">Email</label>
       <input type="email" id="email" name="email" value="<%= user.email %>">
+      <div id="emailErr"></div>
     </div>
-    <div>
-      <label for="birthday">Birthday</label>
-      <input type="date" id="birthday" name="birthday" value="<%= user.birthday.toISOString().substring(0, 10) %>">
-    </div>
-    <div>
-      <label for="gender">Gender</label>
-      <select id="gender" name="gender">
-        <option value="Male" <%= user.gender === 'Male' ? 'selected' : '' %>>Male</option>
-        <option value="Female" <%= user.gender === 'Female' ? 'selected' : '' %>>Female</option>
-      </select>
-    </div>
+    
     <div>
       <label for="password">Password (leave blank to keep current password)</label>
       <input type="password" id="password" name="password">
+      <div id="passErr"></div>
     </div>
-    <div>
-      <label for="image">Profile Picture</label>
-      <input type="file" id="image" name="image">
-    </div>
+    
     <button type="submit">Update Profile</button>
   </form>
   
-      <%- include('partials/footer') %>
-       
+   <script src="/js/main/profile_update.js"></script>
 </body>
 </html>
