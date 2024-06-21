@@ -4,6 +4,7 @@
 <%- include('partials/head') %>
 <head>
   <script defer src="/js/main/arrow.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 </head>
 
 <body id="top">
@@ -101,57 +102,65 @@
 <!-- New Section for Tours BYy TYPE-->
 <div class="daily-tours">
   <h2 class="daily-tours-title">TOURS BY TYPE</h2>
-  <div class="afret">
-    <div class="scroller-container">
-      <div class="scroller">
-    
-    <ul class="image-list">
-      <li>
-        <a href="best">
-        <img src="https://th.bing.com/th/id/OIP.ZdpBDZigrfkkalTxLNbOcgHaEO?w=293&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="">
-      </a>
-        <p>Best Of Cairo Tour From Sinai</p>
-        
-      </li>
-      <li>
-        <img src="/assets/images/download.jpeg" alt="">
-        <p>Best Of Cairo 3 Tour</p>
-      </li>
-      <li>
-        <img src="https://th.bing.com/th/id/OIP.b6qtJyin9FIupoD4yfCmQgHaF7?w=189&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="">
-        <p> THE BEST TRAVEL EXPERIENCES IN <br> EGYPT</p>
-      </li>
-      <li>
-        <img src="https://th.bing.com/th/id/OIP.MqDQlRok5CYqMZ5Jkn9XNQAAAA?w=145&h=155&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="">
-        <p> GUIDE TO EGYPTIAN CULTURE AND CUSTOMS</p>
-      </li>
-      <li>
-        <img src="https://th.bing.com/th/id/OIP.d6aNF7WZn41acpGfc4X5XQHaE9?w=276&h=185&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="">
-        <p> BEST TIME TO VISIT EGYPT</p>
-      </li>
-      <li>
-        <img src="https://th.bing.com/th/id/OIP.aIIf2gT0Z-OP_GJdqDLvfQHaLG?w=115&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="">
-        <p> WHERE TO STAY IN CAIRO</p>
-      </li>
-      <li>
-        <img src="https://th.bing.com/th/id/OIP.OJwypVJywCVCQFpUGoMOPAAAAA?w=158&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="">
-        <p> 10 BEST THINGS TO DO IN EGYPT</p>
-      </li>
-      <li>
-        <img src="https://th.bing.com/th/id/OIP.LFowPaDTEu-e56p-3v-Q3gHaFj?w=229&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="">
-        <p> IS EGYPT SAFE TO TRAVEL TO?</p>
-      </li>
-      <li>
-        <img src="https://th.bing.com/th/id/OIP.LTdtASgDqHwil-zWSdrstgHaEd?w=280&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="">
-        <p>BEST VIEW TO LOOK</p>
-      </li>
-      <li>
-      
-    </ul>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="https://th.bing.com/th/id/OIP.b6qtJyin9FIupoD4yfCmQgHaF7?w=189&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="Image 1">
+      </div>
+      <div class="swiper-slide">
+        <img src="https://th.bing.com/th/id/OIP.MqDQlRok5CYqMZ5Jkn9XNQAAAA?w=145&h=155&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="Image 2">
+      </div>
+      <div class="swiper-slide">
+        <img src="https://th.bing.com/th/id/OIP.d6aNF7WZn41acpGfc4X5XQHaE9?w=276&h=185&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="Image 3">
+      </div>
+      <div class="swiper-slide">
+        <img src="https://th.bing.com/th/id/OIP.9OaRTIKFDVZbRzvgt1WqtgHaFj?w=215&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="Image 4">
+      </div>
+      <div class="swiper-slide">
+        <img src="https://th.bing.com/th/id/OIP.p1-7PqFmUkWuGCEw5vlWXgHaE7?w=282&h=188&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="Image 5">
+      </div>
+      <!-- Add more slides as needed -->
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+    <!-- Add Navigation -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <!-- Add Scrollbar -->
+    <div class="swiper-scrollbar"></div>
   </div>
-  
-</div>
-  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var swiper = new Swiper('.swiper-container', {
+        direction: 'horizontal',
+        loop: true,
+        slidesPerView: 3, // Show 3 images at a time
+        spaceBetween: 10, // Space between images
+
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+
+        scrollbar: {
+          el: '.swiper-scrollbar',
+          draggable: true,
+        },
+      });
+    });
+  </script>
+
+
+
 </div>
      
 

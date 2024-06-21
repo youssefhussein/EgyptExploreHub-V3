@@ -546,60 +546,37 @@
    * #TOURS BY TYPE
   \*-----------------------------------*/
 
-  .afret{
-    position: relative;
-    overflow: hidden;
+  .swiper-container {
+    width: 80%;
+    height: 400px;
   }
-  .image-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  .swiper-slide{
     display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
-  .afret ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-wrap: row; /* Allow items to wrap to the next row */
-    justify-content: space-evenly; /* Evenly distribute items along the main axis */
-  }
-  
-  .afret li {
-    width: 45%; /* Each item takes up 45% of the container width for two items per row */
-    box-sizing: border-box; /* Include padding and border in the width */
-    padding: 5px; /* Add smaller spacing around each item */
-  }
-  
-  .afret img {
-    display: block;
-   min-width: 100%; /* Make the image fill its parent container (the list item) */
-    min-height: 65%; /* Maintain aspect ratio */
-    
-  }
-
-  .image-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-  }
-
-  .scroller-container {
+  .swiper-slide img {
     width: 100%;
-    overflow-x: auto;
-    white-space: nowrap;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
   }
   
-  .scroller {
-    display: inline-block;
+  .swiper-button-next, .swiper-button-prev {
+    color: #000;
   }
   
-  .scroller img {
-    width: 300px; /* Adjust image width as needed */
-    height: auto; /* Maintain aspect ratio */
-    margin-right: 10px; /* Add space between images */
+  .swiper-pagination-bullet-active {
+    background: #000;
+  }
+  
+  .swiper-scrollbar {
+    background: #ddd;
+  }
+  
+  .swiper-scrollbar-drag {
+    background: #888;
   }
   
   
