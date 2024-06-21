@@ -4,6 +4,7 @@ const mainRouter = express.Router();
 const {authMiddleware } = require("../controllers/middleware/authMiddleware");
 const Packagecontrol = require('../controllers/packages')
 const homeController = require('../controllers/homeController')
+const userController = require('../controllers/userController')
 //home page
 mainRouter.get("/", homeController.index_get);
 
@@ -43,8 +44,6 @@ mainRouter.get("/changePass", (req, res) => {
   res.render("./main/changePass" );
 });
 
-mainRouter.get("/profile", (req, res) => {
-  res.render("./main/profile" );
-});
-
+mainRouter.get("/profile",authController,userController.getProfile);
+mainRouter.put("/profile",authController,userController.updateProfile);
 module.exports = mainRouter;
