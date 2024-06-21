@@ -3,14 +3,9 @@ const authController = require("../controllers/authController");
 const mainRouter = express.Router();
 const {authMiddleware } = require("../controllers/middleware/authMiddleware");
 const Packagecontrol = require('../controllers/packages')
-
+const homeController = require('../controllers/homeController')
 //home page
-mainRouter.get("/", (req, res) => {
-Packagecontrol.allpkg_get(req,res)
-
-  res.render("./main/index",{title:'EgyptExploreHub - Travel' , });
-});
-
+mainRouter.get("/", homeController.index_get);
 
 //Login page
 

@@ -1,33 +1,75 @@
-<li>
-  <div class="popular-card">
+<%# this file should have access to all the packs and show 5 packages %>
+<% const numberOfPackages = 2 %>
+<% for( let i = 0; i < numberOfPackages ;  i++ ) { %>
 
-    <figure class="card-img">
-      <a href="/alex"> <img src="https://english.ahram.org.eg/Media/News/2014/3/13/2014-635303409753159476-315.jpg" alt="alex library" >
-      </a></figure>
 
-    <div class="card-content">
 
-      <div class="card-rating">
-        <ion-icon name="star"></ion-icon>
-        <ion-icon name="star"></ion-icon>
-        <ion-icon name="star"></ion-icon>
-        <ion-icon name="star"></ion-icon>
-        <ion-icon name="star"></ion-icon>
+
+ <%# gets the first 64 words of the description %>
+<% const sixtyWordDesc = packs[i].description.split(/\./i).slice(0, 3).join(". ").concat("..."); %>
+
+
+  <li>
+    <div class="package-card">
+  
+      <figure class="card-banner"  onclick="window.location.href='/package/<%= packs[i]._id %>'">
+        <img src="/assets/images/package1.jpg" alt= <%= packs[i].name %> loading="lazy" >
+      </figure>
+  
+      <div class="card-content">
+  
+        <h3 class="h3 card-title"> <%= packs[i].name %> </h3>
+  
+        <p class="card-text">
+         <%= sixtyWordDesc %>
+        </p>
+  
+        <ul class="card-meta-list">
+  
+          <li class="card-meta-item">
+            <div class="meta-box">
+              <ion-icon name="time"></ion-icon>
+  
+              <p class="text">7D/6N</p>
+            </div>
+          </li>
+  
+          <li class="card-meta-item">
+            <div class="meta-box">
+              <ion-icon name="people"></ion-icon>
+  
+              <p class="text">pax: 10</p>
+            </div>
+          </li>
+  
+          <li class="card-meta-item">
+            <div class="meta-box">
+              <ion-icon name="location"></ion-icon>
+  
+              <p class="text"> <%= packs[i].location %> </p>
+            </div>
+          </li>
+  
+        </ul>
+  <a href="/package/<%= packs[i]._id %>" class="card-text" style="text-align: center; padding-top: 10%;">Learn More</a>
       </div>
-
-      <p class="card-subtitle">
-        <a href="#">Egypt</a>
-      </p>
-
-      <h3 class="h3 card-title">
-        <a href="#">Alex Library</a>
-      </h3>
-
-      <p class="card-text">
-        The Alexandria Library , a beacon of knowledge and culture, serves as a testament to Egypt's rich intellectual heritage, offering a wealth of resources and fostering scholarly pursuits in a contemporary setting.
-      </p>
-
+  
+      <div class="card-price">
+  
+     
+        <p class="price">
+          £ <%= packs[i].price %>
+          <span>/ per person</span>
+        </p>
+  
+         <a href = "bookingForm/<%= packs[i]._id %>"><button class="btn btn-secondary">Book Now</button></a>
+  
+      </div>
+  
     </div>
+  </li>
 
-  </div>
-</li>
+
+
+
+  <% } %>

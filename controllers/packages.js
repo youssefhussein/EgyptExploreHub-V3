@@ -73,16 +73,3 @@ module.exports.singlepkg_get = async (req, res) => {
 };
 
 
-module.exports.allpkg_pageGet = async (req, res) => {
-  try {
-    const packs = await Package.find({});
-
-    res
-      .status(200)
-      .json({packs})
-    console.log("success all packages");
-  } catch (err) {
-    res.status(400).json({ err });
-    console.log("fail all packages");
-  }
-};
