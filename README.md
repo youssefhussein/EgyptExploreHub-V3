@@ -54,10 +54,15 @@ Project members:
 - [ ] Group chat for people that bought the same package - BONUS
 - [ ] Add animations to the home page
 
-### Check these
+# things I (@youssefhussein) learned from this project
 
-isCurrency - validator package npm [npm page](https://www.npmjs.com/package/validator)
-pak._id
-
-/pack/:id
-res.render(view1pack , {findbyid(id)})
+- mongoose hooks and schema validation
+- express middleware
+- ejs templating (not that good imo)
+- FOR THE LOVE OF GOD! USE SOMETHING TO DEAL WITH CSS -> SASS, less, tailwind, bootstrap,etc and use it FROM THE START of the project
+- learned how to use the google maps api (display maps and markers and the autocomplete feature)
+- learned the difference between different types of deployments (PaaS, serverless)
+- managing my API keys
+- MVC architecture (honestly slowed down the development process idk if i used it wrong or if i should have split the team into different parts of the mvc)
+- browser cookies and hashing passswords with bcrypt
+- learned basic authentication and authorization
