@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-const {User} = require("./users");
+const {User} = require("../models/users");
 const { isAfter, add, isBefore } = require("date-fns");
 const nodemailer = require("nodemailer");
 
@@ -38,52 +38,6 @@ const packageSchema = Schema({
   },
   capacity: { type: Number, min: [5, "Must be at least five people so make money"], required: [true,"Add a capacity"], default: 10 },
 });
-
-//sending email to clients
-packageSchema.post("save", async function (doc) {
-  try{
-    const transporter = nodemailer.createTransport({
-      host: "smtp.ethereal.email",
-      port: 587,
-      secure: true, // Use `true` for port 465, `false` for all other ports
-      auth: {
-        user: process.env.MAIL_USER,
-        pass: process.env.MAIL_PASSWORD,
-      },
-    });
-
-
-
-
-  const allEmails = await User.find({},'email').exec();
-  console.log(allEmails)
-  const pureEmails = allEmails.map(email => email.email);
-console.log(pureEmails)
-  const email = pureEmails.join(','); 
-console.log(email)
-console.log(this.name)
-
-  const info = await transporter.sendMail({
-  from: `"EgyptExploreHub 👻" < ${process.env.MAIL_USER} >`, // sender address
-  to: "zeyad2202617@miuegypt.edu.eg", // list of receivers
-  subject: "Hello ✔", // Subject line
-  text: "Hello world?", // plain text body
-  html: `<div><b>Hello world?</b>  "${doc.name}" new package added. <br>At-> "${doc.location}"</div>`, // html body
-});
-
-console.log("Message sent: %s", info.messageId);}
-catch(err){
-  console.log(err)
-}
-
-
-
-
-
-
-
-})
-
 
 
 

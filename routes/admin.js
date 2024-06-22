@@ -11,7 +11,7 @@ adminRouter.use(bodyParser.urlencoded({ extended: true }));
 
 adminRouter.post("/addpkg_post", Packagecontrol.addpkg_post);
 
-adminRouter.delete("/deletepkg", Packagecontrol.deletepkg_post);
+//adminRouter.delete("/deletepkg", Packagecontrol.deletepkg_post);
 
 
 //middleware to check if user is admin
