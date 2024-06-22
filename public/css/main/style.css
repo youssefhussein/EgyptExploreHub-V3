@@ -575,12 +575,14 @@
     background: #000;
   }
   
-  .swiper-scrollbar {
-    background: #ddd;
+  .swiper-button-next {
+    
+    right: 10px; /* Adjust right position */
+    
   }
-  
-  .swiper-scrollbar-drag {
-    background: #888;
+  .swiper-button-prev {
+    
+    left: 10px; /* Adjust left position */
   }
   
   
@@ -591,6 +593,7 @@
   
   .daily-tours {
     margin-bottom: 20px; /* Adjust spacing as needed */
+    position: relative;
   }
   
   .daily-tours-title {

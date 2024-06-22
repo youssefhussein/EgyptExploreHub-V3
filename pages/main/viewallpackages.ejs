@@ -12,7 +12,7 @@
   <li>
     <div class="package-card">
   
-      <figure class="card-banner"  onclick="window.location.href='/package/<%= packs[i]._id %>'">
+      <figure class="card-banner" >
         <img src="/assets/images/package1.jpg" alt= <%= packs[i].name %> loading="lazy" >
       </figure>
   
@@ -38,7 +38,7 @@
             <div class="meta-box">
               <ion-icon name="people"></ion-icon>
   
-              <p class="text">pax: 10</p>
+              <p class="text"><%= packs[i].capacity %> people</p>
             </div>
           </li>
   
@@ -51,7 +51,7 @@
           </li>
   
         </ul>
-  <a href="/package/<%= packs[i]._id %>" class="card-text" style="text-align: center; padding-top: 10%;">Learn More</a>
+ 
       </div>
   
       <div class="card-price">
