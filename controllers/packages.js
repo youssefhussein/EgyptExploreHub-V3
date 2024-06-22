@@ -114,4 +114,33 @@ module.exports.deletepkg_get = async (req, res) => {
     res.status(400).json({ err });
   }
 };
+module.exports.deletepkg_post = async (req, res) => {
+  const id = req.params.id;
 
+  try {
+    await Package.findByIdAndRemove(id);
+    res.status(200).json({ success : true ,message: "Package deleted successfully" });
+    console.log("success package deleted");
+  } catch (err) {
+    console.log("fail package deleted");
+    res.status(400).json({ err });
+  }
+};
+
+//display all packages
+module.exports.adminviewpkg = async (req, res) => {
+  try {
+    const packs = await Package.find({});
+
+    res
+      .status(200)
+      .render("adminstuff/menus/pkg/removePKG", {
+        title: "View Packages",
+        packs,
+      });
+    console.log("success all packages");
+  } catch (err) {
+    res.status(400).json({ err });
+    console.log("fail all packages");
+  }
+};

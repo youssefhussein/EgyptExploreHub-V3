@@ -11,6 +11,7 @@ adminRouter.use(bodyParser.urlencoded({ extended: true }));
 
 adminRouter.post("/addpkg_post", Packagecontrol.addpkg_post);
 
+adminRouter.delete("/deletepkg", Packagecontrol.deletepkg_post);
 
 
 //middleware to check if user is admin
@@ -38,9 +39,7 @@ adminRouter.get("/addPKG", (req, res) => {
 adminRouter.get("/editPKG", (req, res) => {
   res.render("./adminstuff/menus/pkg/editPKG", { title: "" });
 });
-adminRouter.get("/removePKG", (req, res) => {
-  res.render("./adminstuff/menus/pkg/removePKG", { title: "" });
-});
+adminRouter.get("/removePKG", Packagecontrol.adminviewpkg);
 
 adminRouter.get("/viewPKG", Packagecontrol.allpkg_get);
 
