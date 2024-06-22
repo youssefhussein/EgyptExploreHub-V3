@@ -42,7 +42,7 @@ module.exports.addpkg_post = async (req, res) => {
    
    
   } catch (err) {
-    console.log("fail package added");
+    console.log("fail package added" ,err);
     
 if(err.message){
 
@@ -115,3 +115,13 @@ module.exports.deletepkg_get = async (req, res) => {
   }
 };
 
+module.exports.packages_json = async (req, res) => {
+try{
+  const packs = await Package.find({});
+  res.status(200).json({packs});  
+}catch(err){
+  res.status(400).json({err});}
+
+
+
+}

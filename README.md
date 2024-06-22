@@ -44,7 +44,7 @@ Project members:
 - [X] Fix a booking form - @Salmaa-Elkholy @HassanZerkallah
 - [X] Add user account management view - @HassanZerkallah
 - [ ] Add backend user account management view - @youssefhussein
-- [ ] Render single packages in the db to the frontend (with a google map) - @Zeyad-Tantawy1
+- [X] Render single packages in the db to the frontend (with a google map) - @Zeyad-Tantawy1
 - [X] Fix styling
 - [ ] Add email newsletter with nodemailer or resend - @youssefhussein @Zeyad-Tantawy1
 - [ ] Add picture to package model 

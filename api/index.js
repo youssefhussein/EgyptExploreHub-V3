@@ -22,6 +22,7 @@ app.use(cookieParser())
 
 const adminRouter = require('../routes/admin')
 const mainRouter = require('../routes/main');
+const apiRouter = require('../routes/external')
 const url = process.env.DB_URL
 
 //connecting to db
@@ -37,5 +38,7 @@ app.get('*',checkUser)
 app.use('/', mainRouter); 
 
 app.use('/admin', adminRouter); 
+
+app.use('/api',apiRouter )
 
 module.exports = app
