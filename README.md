@@ -64,3 +64,7 @@ Project members:
 - MVC architecture (honestly slowed down the development process idk if i used it wrong or if i should have split the team into different parts of the mvc)
 - browser cookies and hashing passswords with bcrypt
 - learned basic authentication and authorization
+
+
+# project has been un-deployed due to free trial expiring ty everybody for your help <3
+![Project will be removed from the internet august 1st 2024](image.png)
